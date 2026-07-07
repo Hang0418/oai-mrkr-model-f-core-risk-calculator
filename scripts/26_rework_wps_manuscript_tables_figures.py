@@ -170,6 +170,10 @@ def update_crossrefs(text: str) -> str:
         ("summarized in Table 6 and Figure 6.", "summarized in Table 7 and Figure 7."),
         ("summarized in Table 7, Table 8, and Figure 7.", "summarized in Table 8, Table 9, and Figure 8."),
         ("shown in Supplementary Figure 1.", "shown in Supplementary Figure 3."),
+        (
+            "To assess potential selection bias, included and excluded knees should be compared in supplementary analyses using baseline demographic, symptom, radiographic, and outcome characteristics.",
+            "To assess potential selection bias, included and excluded knees were compared in Supplementary Tables 7 and 8 using demographic, symptom, radiographic, follow-up, and outcome characteristics.",
+        ),
     ]
     for old, new in replacements:
         text = text.replace(old, new)
@@ -382,6 +386,25 @@ def supp_tables(doc):
     caption(doc, "Supplementary Table 6. OAI Model E proportional-hazards sensitivity analysis.")
     add_table(doc, rows, [3.0, 1.0, 1.0], {1, 2})
     note(doc, "The time-varying coefficient sensitivity model added log(time) interactions for variables with prespecified or observed PH concerns.")
+
+    for title, filename in [
+        ("Supplementary Table 7. OAI Model F-core included versus excluded comparison.", "oai_model_f_included_vs_excluded_comparison.csv"),
+        ("Supplementary Table 8. MRKR Model F-core included versus excluded comparison.", "mrkr_model_f_included_vs_excluded_comparison.csv"),
+    ]:
+        df = pd.read_csv(TABLES / filename)
+        rows = [["Characteristic", "Included", "Excluded", "Included non-missing", "Excluded non-missing", "SMD"]]
+        for _, r in df.iterrows():
+            rows.append([
+                clean_cell(r["Characteristic"]),
+                clean_cell(r["Included"]),
+                clean_cell(r["Excluded"]),
+                clean_cell(r["Included non-missing"]),
+                clean_cell(r["Excluded non-missing"]),
+                clean_cell(r["SMD"]),
+            ])
+        caption(doc, title)
+        add_table(doc, rows, [2.35, 1.05, 1.05, 0.8, 0.8, 0.55], {1, 2, 3, 4, 5})
+        note(doc, "Included knees were complete for Model F-core variables; excluded knees were incomplete or otherwise unavailable for the mapped Model F-core analysis. SMD values >=0.10 indicate potentially meaningful imbalance.")
 
 
 def add_figures(doc):

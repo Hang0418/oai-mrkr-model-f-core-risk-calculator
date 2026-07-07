@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Model F-core research-use risk calculator</title>
+  <style>
+    :root {
+      --navy: #0b2545;
+      --blue: #1f5d99;
+      --teal: #1f7a5c;
+      --line: #d8e2ec;
+      --bg: #f7f9fb;
+      --warn: #fff1f1;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #17212b;
+      background: #ffffff;
+    }
+    main {
+      max-width: 960px;
+      margin: 32px auto;
+      padding: 0 20px 40px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 28px;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin: 0 0 24px;
+      color: #52616b;
+      line-height: 1.45;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr);
+      gap: 20px;
+      align-items: start;
+    }
+    section {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      background: var(--bg);
+    }
+    label {
+      display: block;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 12px 0 6px;
+      font-size: 14px;
+    }
+    input, select {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid #b8c6d6;
+      border-radius: 6px;
+      padding: 10px 11px;
+      font-size: 15px;
+      background: white;
+    }
+    .result {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+    .result strong {
+      display: block;
+      color: var(--navy);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    .risk {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--blue);
+    }
+    .risk.recal { color: var(--teal); }
+    .meta {
+      color: #52616b;
+      font-size: 13px;
+      line-height: 1.45;
+      margin-top: 8px;
+    }
+    .notice {
+      background: var(--warn);
+      border-color: #f0b4b4;
+      color: #5f1818;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .badge {
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 9px;
+      margin: 0 6px 8px 0;
+      font-size: 12px;
+      color: #52616b;
+      background: white;
+    }
+    .formula {
+      margin-top: 20px;
+      font-size: 12px;
+      line-height: 1.45;
+      color: #52616b;
+    }
+    @media (max-width: 760px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Model F-core research-use risk calculator</h1>
+    <p class="subtitle">OAI-derived common-variable transport model with selectable local recalibration. This tool is for manuscript reproducibility, transport validation, and site-specific recalibration workflows.</p>
+    <div>
+      <span class="badge">Model version: F-core v0.1</span>
+      <span class="badge">Formula basis: OAI Cox landmark model</span>
+      <span class="badge">GitHub: github.com/Hang0418/oai-mrkr-model-f-core-risk-calculator</span>
+    </div>
+
+    <div class="grid">
+      <section>
+        <label for="age">Age, years</label>
+        <input id="age" type="number" min="30" max="100" step="1" value="64">
+
+        <label for="sex">Sex</label>
+        <select id="sex">
+          <option value="0">Male</option>
+          <option value="1" selected>Female</option>
+        </select>
+
+        <label for="side">Knee side</label>
+        <select id="side">
+          <option value="0">Left</option>
+          <option value="1" selected>Right</option>
+        </select>
+
+        <label for="pain">Landmark pain score, 0-10</label>
+        <input id="pain" type="number" min="0" max="10" step="0.1" value="6">
+
+        <label for="kl0">Baseline Kellgren-Lawrence grade</label>
+        <input id="kl0" type="number" min="0" max="4" step="1" value="2">
+
+        <label for="kl24">24-month Kellgren-Lawrence grade</label>
+        <input id="kl24" type="number" min="0" max="4" step="1" value="3">
+
+        <label for="mode">Local recalibration mode</label>
+        <select id="mode">
+          <option value="mrkr" selected>MRKR slope + baseline recalibration</option>
+          <option value="oai">Original OAI-derived baseline</option>
+          <option value="custom">Custom local slope + baseline</option>
+        </select>
+
+        <label for="customSlope">Custom calibration slope</label>
+        <input id="customSlope" type="number" min="0.1" max="2" step="0.01" value="0.68">
+
+        <label for="customH0">Custom 24-month baseline cumulative hazard</label>
+        <input id="customH0" type="number" min="0.0001" max="1" step="0.0001" value="0.0706">
+      </section>
+
+      <section>
+        <div class="result">
+          <strong>Original OAI-derived 24-month risk</strong>
+          <div id="oaiRisk" class="risk">-</div>
+          <div class="meta">Uses OAI pain standardization and OAI baseline cumulative hazard at 24 months.</div>
+        </div>
+        <div class="result">
+          <strong>Selected-mode 24-month risk</strong>
+          <div id="selectedRisk" class="risk recal">-</div>
+          <div id="stratum" class="meta">Risk stratum: -</div>
+          <div id="klwText" class="meta">KL worsening: -</div>
+        </div>
+        <div class="result">
+          <strong>Clinical interpretation</strong>
+          <div id="interpretation" class="meta">-</div>
+        </div>
+        <div class="result notice">
+          Strict research-use statement: this calculator is not validated as a clinical decision instrument and must not be used to determine surgery, treatment eligibility, referral urgency, or individual patient management without prospective validation, local recalibration, and governance approval.
+        </div>
+      </section>
+    </div>
+
+    <p class="formula">
+      LP = 0.001641*age - 0.135838*female + 0.004416*right_knee + 0.290862*pain_z + 0.778458*baseline_KL + 1.019422*I(24-month KL - baseline KL >= 1).
+      Original OAI-derived risk = 1 - exp[-H0(24)*exp(LP)], H0(24)=0.003919.
+      MRKR recalibrated risk = 1 - exp[-0.070564*exp(0.681400*LP)]. Custom recalibration uses the same slope plus baseline form.
+    </p>
+  </main>
+
+  <script>
+    const beta = {
+      age: 0.00164077477256476,
+      female: -0.13583783214975,
+      right: 0.00441591384434222,
+      pain: 0.290861790566034,
+      kl: 0.778457697796415,
+      klw: 1.01942211707925
+    };
+    const oaiPainMean = 1.40536404639175;
+    const oaiPainSd = 1.73779647077576;
+    const mrkrPainMean = 3.37631887456038;
+    const mrkrPainSd = 3.39454813926584;
+    const h0Oai24 = 0.00391871810230842;
+    const h0Mrkr24 = 0.0705638786413772;
+    const recalSlope = 0.681400186474898;
+
+    function pct(x) {
+      return (100 * x).toFixed(1) + "%";
+    }
+    function riskStratum(x) {
+      if (x < 0.10) return "<10%";
+      if (x < 0.25) return "10-25%";
+      if (x < 0.50) return "25-50%";
+      return ">50%";
+    }
+    function interpretation(x) {
+      if (x < 0.10) return "Low recalibrated near-term risk stratum. Interpret only within a research validation workflow.";
+      if (x < 0.25) return "Intermediate recalibrated near-term risk stratum. Consider as a research enrichment signal, not a treatment recommendation.";
+      if (x < 0.50) return "Elevated recalibrated near-term risk stratum. Use for validation, calibration assessment, or trial-enrichment context only.";
+      return "Very high recalibrated near-term risk stratum. This does not imply surgical indication; clinical decisions require independent evaluation.";
+    }
+    function lp(painMean, painSd) {
+      const age = Number(document.getElementById("age").value || 0);
+      const female = Number(document.getElementById("sex").value);
+      const right = Number(document.getElementById("side").value);
+      const pain = Number(document.getElementById("pain").value || 0);
+      const kl = Number(document.getElementById("kl0").value || 0);
+      const kl24 = Number(document.getElementById("kl24").value || 0);
+      const klw = (kl24 - kl) >= 1 ? 1 : 0;
+      const painZ = (pain - painMean) / painSd;
+      return beta.age * age + beta.female * female + beta.right * right +
+        beta.pain * painZ + beta.kl * kl + beta.klw * klw;
+    }
+    function update() {
+      const lpOai = lp(oaiPainMean, oaiPainSd);
+      const lpMrkr = lp(mrkrPainMean, mrkrPainSd);
+      const oaiRisk = 1 - Math.exp(-h0Oai24 * Math.exp(lpOai));
+      const mode = document.getElementById("mode").value;
+      let selectedRisk;
+      if (mode === "oai") {
+        selectedRisk = oaiRisk;
+      } else if (mode === "custom") {
+        const slope = Number(document.getElementById("customSlope").value || recalSlope);
+        const h0 = Number(document.getElementById("customH0").value || h0Mrkr24);
+        selectedRisk = 1 - Math.exp(-h0 * Math.exp(slope * lpMrkr));
+      } else {
+        selectedRisk = 1 - Math.exp(-h0Mrkr24 * Math.exp(recalSlope * lpMrkr));
+      }
+      const kl0 = Number(document.getElementById("kl0").value || 0);
+      const kl24 = Number(document.getElementById("kl24").value || 0);
+      const klw = (kl24 - kl0) >= 1 ? "yes" : "no";
+      document.getElementById("oaiRisk").textContent = pct(oaiRisk);
+      document.getElementById("selectedRisk").textContent = pct(selectedRisk);
+      document.getElementById("stratum").textContent = "Risk stratum: " + riskStratum(selectedRisk);
+      document.getElementById("klwText").textContent = "KL worsening automatically derived: " + klw + " (" + (kl24 - kl0).toFixed(0) + " grade change)";
+      document.getElementById("interpretation").textContent = interpretation(selectedRisk);
+    }
+    document.querySelectorAll("input, select").forEach(el => el.addEventListener("input", update));
+    update();
+  </script>
+</body>
+</html>

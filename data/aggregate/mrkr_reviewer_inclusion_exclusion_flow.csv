@@ -1,0 +1,8 @@
+Step,Knees,Participants/patients,Reason/detail
+MRKR knee-level baseline-landmark pairs assembled,9115,5162,Derived from side-specific radiographs with no hardware at baseline
+Exclude no positive hardware follow-up,4506,2578,time_hardware_months <= 0 or missing
+Exclude missing/ambiguous laterality,0,0,
+Exclude missing landmark pain,1197,861,Nearest knee pain score required
+Exclude missing baseline/landmark KL or KL change,0,0,Model-inferred KL needed
+Exclude missing age/sex,0,0,
+MRKR Model F-core validation set,3412,2179,Hardware events=1140

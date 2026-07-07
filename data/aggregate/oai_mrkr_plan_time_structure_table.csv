@@ -1,0 +1,3 @@
+"cohort","knees","patients","total_events","event_rate","median_followup_months","median_event_time_months","events_12m","events_24m","events_36m","events_60m","censored_before_24m","censored_before_36m","censored_before_60m","at_risk_12m","at_risk_24m","at_risk_36m","at_risk_60m"
+"OAI",3104,1656,566,0.182345360824742,84,60.9609856262834,45,103,160,279,145,499,689,3045,2856,2445,2136
+"MRKR",3412,2179,1140,0.33411488862837,19.9753593429158,7.62217659137577,656,855,935,1045,1049,1468,1884,2308,1508,1009,483

@@ -1,0 +1,3 @@
+"bootstrap_repetitions_requested","bootstrap_repetitions_used","bootstrap_failures","apparent_c_index","mean_optimism","optimism_corrected_c_index","model"
+100,100,0,0.768398627167292,0.00500344824783944,0.763395178919452,"common_change"
+100,100,0,0.768494411019149,0.00729110557146219,0.761203305447687,"full_change"

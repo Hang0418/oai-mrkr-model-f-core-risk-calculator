@@ -1,0 +1,4 @@
+"model","validation","n","participants","events_total","events_by_horizon","c_index","mean_predicted_risk","observed_km_risk","calibration_slope","horizon_months","optimism_corrected_c_index","mean_optimism","bootstrap_repetitions_used"
+"common_change","OAI apparent/internal",3068,1642,560,274,0.768398627167292,0.099329800159291,0.104446342842249,0.999999998983238,60,0.763395178919452,0.00500344824783944,100
+"common_change","CHECK external exploratory TKA",1712,860,28,26,0.786699808312093,0.032427170838253,0.0151869158878505,1.12090344087618,60,0.763395178919452,0.00500344824783944,100
+"full_change","OAI apparent/internal",3040,1633,555,270,0.768494411019149,0.0985272953160324,0.103777234181512,0.999999999423312,60,0.761203305447687,0.00729110557146219,100

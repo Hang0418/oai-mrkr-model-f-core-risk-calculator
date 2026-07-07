@@ -1,0 +1,5 @@
+"validation","outcome","n","events","event_rate","odds_ratio_per_0_10_predicted_tka_risk","p_value","c_index_auc"
+"CHECK structural progression","kl_progression_t0_t5",1597,899,0.56293049467752,1.19937144522516,0.2392294236762,0.497670126947803
+"CHECK structural progression","kl_progression_t0_t8",1548,1056,0.682170542635659,0.736592663749472,0.0562250487136742,0.425243286523774
+"CHECK structural progression","medial_jsn_progression_t0_t5",1596,676,0.423558897243108,1.49962772612243,0.0138631644516849,0.455246655518395
+"CHECK structural progression","medial_jsn_progression_t0_t8",1532,772,0.503916449086162,1.07193048698585,0.630244291506805,0.442459776383965

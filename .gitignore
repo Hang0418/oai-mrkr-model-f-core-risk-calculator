@@ -1,0 +1,26 @@
+.DS_Store
+__pycache__/
+*.pyc
+.Rhistory
+.RData
+.Rproj.user/
+
+# Restricted or row-level data: do not commit.
+raw/
+MRKR/
+derived/
+data/raw/
+data/row_level/
+data/restricted/
+*.dta
+*.sav
+*.rds
+*.RDS
+*.RData
+*.xlsx
+
+# Local manuscript build artifacts.
+drafts/
+manuscript/
+*.docx
+

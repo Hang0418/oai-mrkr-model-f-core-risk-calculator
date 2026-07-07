@@ -1,0 +1,24 @@
+variable,definition
+cohort,OAI or MRKR.
+split,"train for OAI, validation for MRKR."
+patient_id,"De-identified participant or patient identifier, cohort-specific."
+knee_id,Cohort-specific knee identifier.
+side,R or L.
+side_label,right or left.
+time_months,Time from landmark to primary event or censoring.
+event_primary,Primary event indicator for the cohort-specific outcome.
+event_primary_definition,Outcome definition used for the primary training/validation endpoint.
+event_sensitivity,MRKR patient-level CPT arthroplasty sensitivity outcome; missing for OAI.
+time_sensitivity_months,Time to sensitivity event or censoring where applicable.
+age,Age at baseline/landmark proxy used for transport modeling.
+female,"1 female, 0 male."
+pain_baseline_0_10,Baseline pain mapped to 0-10. OAI WOMAC pain is divided by 2; MRKR uses pain_score.
+pain_landmark_0_10,Landmark pain mapped to 0-10.
+pain_change_0_10,Landmark pain minus baseline pain on 0-10 scale.
+pain_landmark_group,"Landmark pain group: 0, 1-3, 4-6, or 7-10."
+kl_baseline,Baseline Kellgren-Lawrence grade. MRKR uses model-inferred KL.
+kl_landmark,Landmark KL grade. MRKR uses model-inferred KL.
+kl_change,Landmark KL minus baseline KL.
+baseline_to_landmark_months,Observed or scheduled interval between baseline and landmark.
+core_model_f_complete,"Complete for age, sex, side, landmark pain, baseline KL, KL change, time, and primary event."
+extended_common_complete,"Core complete plus baseline pain, pain change, and landmark KL."

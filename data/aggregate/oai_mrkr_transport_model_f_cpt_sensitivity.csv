@@ -1,0 +1,2 @@
+"cohort","n_knees","n_patients","cpt_arthroplasty_events","cpt_primary_tka_events","auc_cpt_arthroplasty","auc_cpt_primary_tka","note"
+"MRKR external patient-level CPT sensitivity",3412,2179,1451,1375,0.619475534465847,0.635177042888383,"CPT outcomes are patient-level and not side-specific; use as sensitivity only."

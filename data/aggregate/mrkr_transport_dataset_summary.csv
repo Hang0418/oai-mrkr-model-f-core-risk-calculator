@@ -1,0 +1,15 @@
+metric,value
+knee_rows,9115.0
+patients,5162.0
+model_f_complete_knees,3412.0
+model_f_complete_patients,2179.0
+hardware_events_after_landmark_complete,1140.0
+cpt_arthroplasty_events_after_landmark_complete,1451.0
+cpt_primary_tka_events_after_landmark_complete,1375.0
+median_baseline_to_landmark_months,25.00205338809035
+median_hardware_followup_months,19.975359342915812
+mean_age_complete,63.86547479484174
+female_pct_complete,0.7022274325908558
+pain_24_nonmissing_pct,0.6985189248491498
+pain_0_nonmissing_pct,0.6453099286889742
+kl_change_mean_complete,0.18053927315357562

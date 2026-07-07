@@ -1,0 +1,9 @@
+Step,Knees,Participants/patients,Reason/detail
+OAI knee rows assembled,9592,4796,
+Exclude baseline/prior knee replacement,69,68,Baseline or prior KR/TKA flag
+Exclude target-knee KR/TKA before or at 24-month landmark,74,68,
+Exclude no post-landmark follow-up,692,351,time_from_landmark_months <= 0 or missing
+Exclude missing 24-month pain,443,228,Needed for landmark eligibility
+Exclude missing Model F-core predictors,5210,2690,"Age, sex, side, landmark pain, baseline KL, or KL change"
+OAI Model F-core training set,3104,1656,Events=566
+OAI Model E common-complete set,3066,1640,"Events=559; complete symptoms, KL, JSN, BMI"

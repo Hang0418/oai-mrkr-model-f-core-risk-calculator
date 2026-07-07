@@ -1,0 +1,30 @@
+Characteristic,OAI Model F-core (n=3104 knees),MRKR validation (n=3412 knees),SMD
+"Knees, n",3104,3412,
+"Participants/patients, n",1656,2179,
+"Age, years, mean (SD)",62.8 (9.3),63.9 (11.8),0.104
+"Female sex, n (%)",1835 (59.1%),2396 (70.2%),0.234
+"Right knee, n (%)",1542 (49.7%),1684 (49.4%),0.006
+"Landmark pain score, 0-10, mean (SD)",1.4 (1.7),3.4 (3.4),0.731
+"Baseline KL grade, mean (SD)",2.0 (1.1),2.2 (1.2),0.147
+"KL worsening >=1 grade, n (%)",320 (10.3%),1048 (30.7%),0.522
+"Primary event, n (%)",566 (18.2%),1140 (33.4%),0.352
+"Follow-up, months, median (IQR)",84.0 (36.0-168.0),20.0 (8.3-41.0),
+"Race, overall SMD",,,0.305
+  White,2392 (77.1%),1830 (53.6%),
+  Black,626 (20.2%),1334 (39.1%),
+  Asian,23 (0.7%),138 (4.0%),
+  American Indian/Alaska Native,0 (0.0%),5 (0.1%),
+  Native Hawaiian/Pacific Islander,0 (0.0%),0 (0.0%),
+  More than one race,0 (0.0%),14 (0.4%),
+  Other race,61 (2.0%),6 (0.2%),
+  Unknown/not reported,0 (0.0%),85 (2.5%),
+"Ethnicity, overall SMD",,,0.096
+  Hispanic/Latino,34 (1.1%),73 (2.1%),
+  Not Hispanic/Latino,3070 (98.9%),3128 (91.7%),
+  Unknown/not reported,0 (0.0%),211 (6.2%),
+"Baseline KL distribution, overall SMD",,,0.115
+  KL 0,457 (14.7%),544 (15.9%),
+  KL 1,260 (8.4%),198 (5.8%),
+  KL 2,1353 (43.6%),1227 (36.0%),
+  KL 3,831 (26.8%),946 (27.7%),
+  KL 4,203 (6.5%),497 (14.6%),

@@ -1,0 +1,4 @@
+"outcome_version","n_knees","n_patients","total_events","events_by_24m","c_index","auc_24m","observed_km_24m_risk","calibration_slope","note"
+"hardware_primary",3412,2179,1140,855,0.681142533646572,0.708841345184358,0.279831457357236,0.681400186474898,""
+"cpt_patient_level_sensitivity",3365,2179,1404,1019,0.639526199996117,0.667033558992501,0.307184251126324,0.479583630768344,"CPT outcome is patient-level, not side-specific."
+"combined_hardware_or_cpt",3412,2179,1547,1140,0.635393552826091,0.666046860014089,0.338292732735278,0.480646338526745,""

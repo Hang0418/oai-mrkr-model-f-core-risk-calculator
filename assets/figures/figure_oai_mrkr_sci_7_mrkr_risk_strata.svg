@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='604.80pt' height='345.60pt' viewBox='0 0 604.80 345.60'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw2MDQuODB8MC4wMHwzNDUuNjA='>
+    <rect x='0.00' y='0.00' width='604.80' height='345.60' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw2MDQuODB8MC4wMHwzNDUuNjA=)'>
+<rect x='0.00' y='0.00' width='604.80' height='345.60' style='stroke-width: 0.97; stroke: none; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpMzcuNDZ8NTk0Ljg0fDI0LjI0fDI3Ni41NQ=='>
+    <rect x='37.46' y='24.24' width='557.38' height='252.30' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMzcuNDZ8NTk0Ljg0fDI0LjI0fDI3Ni41NQ==)'>
+<polyline points='37.46,265.08 594.84,265.08 ' style='stroke-width: 0.97; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='37.46,194.50 594.84,194.50 ' style='stroke-width: 0.97; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='37.46,123.93 594.84,123.93 ' style='stroke-width: 0.97; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='37.46,53.35 594.84,53.35 ' style='stroke-width: 0.97; stroke: #EBEBEB; stroke-linecap: butt;' />
+<rect x='121.06' y='240.82' width='38.49' height='24.26' style='stroke-width: 0.97; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #1F7A5C;' />
+<rect x='253.77' y='202.19' width='38.49' height='62.89' style='stroke-width: 0.97; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #1F7A5C;' />
+<rect x='386.48' y='139.06' width='38.49' height='126.02' style='stroke-width: 0.97; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #1F7A5C;' />
+<rect x='519.19' y='69.25' width='38.49' height='195.82' style='stroke-width: 0.97; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #1F7A5C;' />
+<rect x='74.62' y='241.07' width='38.49' height='24.01' style='stroke-width: 0.97; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #1F5D99;' />
+<rect x='207.33' y='207.69' width='38.49' height='57.38' style='stroke-width: 0.97; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #1F5D99;' />
+<rect x='340.04' y='130.15' width='38.49' height='134.93' style='stroke-width: 0.97; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #1F5D99;' />
+<rect x='472.74' y='86.07' width='38.49' height='179.01' style='stroke-width: 0.97; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #1F5D99;' />
+<text x='117.08' y='222.16' text-anchor='middle' style='font-size: 7.68px; font-family: "Helvetica";' textLength='21.55px' lengthAdjust='spacingAndGlyphs'>n=300</text>
+<text x='117.08' y='233.22' text-anchor='middle' style='font-size: 7.68px; font-family: "Helvetica";' textLength='17.28px' lengthAdjust='spacingAndGlyphs'>e=17</text>
+<text x='249.79' y='183.53' text-anchor='middle' style='font-size: 7.68px; font-family: "Helvetica";' textLength='25.81px' lengthAdjust='spacingAndGlyphs'>n=1378</text>
+<text x='249.79' y='194.59' text-anchor='middle' style='font-size: 7.68px; font-family: "Helvetica";' textLength='21.55px' lengthAdjust='spacingAndGlyphs'>e=193</text>
+<text x='382.50' y='111.49' text-anchor='middle' style='font-size: 7.68px; font-family: "Helvetica";' textLength='25.25px' lengthAdjust='spacingAndGlyphs'>n=1411</text>
+<text x='382.50' y='122.55' text-anchor='middle' style='font-size: 7.68px; font-family: "Helvetica";' textLength='21.55px' lengthAdjust='spacingAndGlyphs'>e=494</text>
+<text x='515.21' y='50.59' text-anchor='middle' style='font-size: 7.68px; font-family: "Helvetica";' textLength='21.55px' lengthAdjust='spacingAndGlyphs'>n=323</text>
+<text x='515.21' y='61.66' text-anchor='middle' style='font-size: 7.68px; font-family: "Helvetica";' textLength='21.55px' lengthAdjust='spacingAndGlyphs'>e=151</text>
+</g>
+<g clip-path='url(#cpMC4wMHw2MDQuODB8MC4wMHwzNDUuNjA=)'>
+<text x='32.97' y='267.95' text-anchor='end' style='font-size: 8.00px;fill: #1F2933; font-family: "Helvetica";' textLength='11.12px' lengthAdjust='spacingAndGlyphs'>0.0</text>
+<text x='32.97' y='197.37' text-anchor='end' style='font-size: 8.00px;fill: #1F2933; font-family: "Helvetica";' textLength='11.12px' lengthAdjust='spacingAndGlyphs'>0.2</text>
+<text x='32.97' y='126.80' text-anchor='end' style='font-size: 8.00px;fill: #1F2933; font-family: "Helvetica";' textLength='11.12px' lengthAdjust='spacingAndGlyphs'>0.4</text>
+<text x='32.97' y='56.22' text-anchor='end' style='font-size: 8.00px;fill: #1F2933; font-family: "Helvetica";' textLength='11.12px' lengthAdjust='spacingAndGlyphs'>0.6</text>
+<text x='117.08' y='286.77' text-anchor='middle' style='font-size: 8.00px;fill: #1F2933; font-family: "Helvetica";' textLength='20.69px' lengthAdjust='spacingAndGlyphs'>&lt;10%</text>
+<text x='249.79' y='286.77' text-anchor='middle' style='font-size: 8.00px;fill: #1F2933; font-family: "Helvetica";' textLength='27.59px' lengthAdjust='spacingAndGlyphs'>10-25%</text>
+<text x='382.50' y='286.77' text-anchor='middle' style='font-size: 8.00px;fill: #1F2933; font-family: "Helvetica";' textLength='27.59px' lengthAdjust='spacingAndGlyphs'>25-50%</text>
+<text x='515.21' y='286.77' text-anchor='middle' style='font-size: 8.00px;fill: #1F2933; font-family: "Helvetica";' textLength='20.69px' lengthAdjust='spacingAndGlyphs'>&gt;50%</text>
+<text x='316.15' y='298.21' text-anchor='middle' style='font-size: 10.00px;fill: #1F2933; font-family: "Helvetica";' textLength='55.56px' lengthAdjust='spacingAndGlyphs'>Risk stratum</text>
+<text transform='translate(17.14,150.39) rotate(-90)' text-anchor='middle' style='font-size: 10.00px;fill: #1F2933; font-family: "Helvetica";' textLength='60.58px' lengthAdjust='spacingAndGlyphs'>24-month risk</text>
+<rect x='257.77' y='316.01' width='15.99' height='15.99' style='stroke-width: 0.97; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #1F5D99;' />
+<rect x='319.72' y='316.01' width='15.99' height='15.99' style='stroke-width: 0.97; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #1F7A5C;' />
+<text x='279.39' y='326.88' style='font-size: 8.00px; font-family: "Helvetica";' textLength='34.70px' lengthAdjust='spacingAndGlyphs'>Observed</text>
+<text x='341.34' y='326.88' style='font-size: 8.00px; font-family: "Helvetica";' textLength='33.83px' lengthAdjust='spacingAndGlyphs'>Predicted</text>
+<text x='37.46' y='16.61' style='font-size: 12.00px; font-weight: bold;fill: #0B2545; font-family: "Helvetica";' textLength='225.38px' lengthAdjust='spacingAndGlyphs'>MRKR recalibrated 24-month risk strata</text>
+</g>
+</g>
+</svg>

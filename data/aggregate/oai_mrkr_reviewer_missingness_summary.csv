@@ -1,0 +1,19 @@
+cohort,variable,n,missing_n,missing_pct
+OAI mapped,age,8314,0,0.0
+OAI mapped,female,8314,0,0.0
+OAI mapped,side_label,8314,0,0.0
+OAI mapped,pain_landmark_0_10,8314,0,0.0
+OAI mapped,pain_baseline_0_10,8314,0,0.0
+OAI mapped,kl_baseline,8314,4912,0.5908106807794082
+OAI mapped,kl_landmark,8314,300,0.0360837142169834
+OAI mapped,kl_change,8314,5210,0.6266538369016117
+OAI mapped,time_months,8314,0,0.0
+MRKR mapped,age,9115,0,0.0
+MRKR mapped,female,9115,0,0.0
+MRKR mapped,side_label,9115,0,0.0
+MRKR mapped,pain_landmark_0_10,9115,2748,0.30148107515085026
+MRKR mapped,pain_baseline_0_10,9115,3233,0.35469007131102576
+MRKR mapped,kl_baseline,9115,0,0.0
+MRKR mapped,kl_landmark,9115,0,0.0
+MRKR mapped,kl_change,9115,0,0.0
+MRKR mapped,time_months,9115,0,0.0

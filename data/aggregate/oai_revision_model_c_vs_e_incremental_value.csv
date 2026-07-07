@@ -1,0 +1,2 @@
+"comparison","n","participants","events","lr_chisq","df","p_value","delta_c_index","delta_auc_60m_fixed_logistic","delta_aic"
+"Model E vs Model C on common complete set",3066,1640,559,166.370882089502,5,4.33774638784755e-34,0.0535556171097789,0.0604577283840393,-156.370882089502

@@ -406,6 +406,22 @@ def supp_tables(doc):
         add_table(doc, rows, [2.35, 1.05, 1.05, 0.8, 0.8, 0.55], {1, 2, 3, 4, 5})
         note(doc, "Included knees were complete for Model F-core variables; excluded knees were incomplete or otherwise unavailable for the mapped Model F-core analysis. SMD values >=0.10 indicate potentially meaningful imbalance.")
 
+    df = pd.read_csv(TABLES / "supplementary_table_9_check_exploratory_validation.csv")
+    rows = [list(df.columns)]
+    for _, r in df.iterrows():
+        rows.append([clean_cell(r[c]) for c in df.columns])
+    caption(doc, "Supplementary Table 9. Exploratory CHECK validation of the OAI-derived CHECK-compatible common-change dynamic model.")
+    add_table(doc, rows, [2.25, 2.0, 2.0], {1, 2})
+    note(doc, "The CHECK validation was exploratory because post-landmark TKA event counts were low. The OAI common-change model was internally estimated in OAI and applied to CHECK without claiming definitive full Model E external validation.")
+
+    df = pd.read_csv(TABLES / "supplementary_table_10_oai_check_predictor_harmonization.csv")
+    rows = [list(df.columns)]
+    for _, r in df.iterrows():
+        rows.append([clean_cell(r[c]) for c in df.columns])
+    caption(doc, "Supplementary Table 10. Predictor harmonization between OAI and CHECK for exploratory validation.")
+    add_table(doc, rows, [1.05, 2.0, 2.0, 1.45], {3})
+    note(doc, "Approximately mapped variables were harmonized by clinical construct and visit timing but were not assumed to be measurement-identical across cohorts.")
+
 
 def add_figures(doc):
     doc.add_page_break()
@@ -425,6 +441,7 @@ def add_figures(doc):
         ("Supplementary Figure 1. Formal nomogram for the full OAI dynamic Model E.", "supplementary_figure_s1_model_e_nomogram", 6.3),
         ("Supplementary Figure 2. Model F-core research-use risk calculator.", "supplementary_figure_s2_model_f_calculator_mockup", 6.3),
         ("Supplementary Figure 3. MRKR subgroup performance at 24 months.", "supplementary_figure_s3_mrkr_subgroups", 5.9),
+        ("Supplementary Figure 4. Exploratory CHECK validation of the OAI-derived CHECK-compatible dynamic model.", "supplementary_figure_s4_check_exploratory_validation", 6.3),
     ]
     for title, stem, width in figs:
         caption(doc, title)

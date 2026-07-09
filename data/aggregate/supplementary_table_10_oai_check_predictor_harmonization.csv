@@ -1,0 +1,13 @@
+Predictor,OAI definition,CHECK definition,Harmonization decision
+Age,Baseline age,Baseline age,Directly mapped
+Sex,Participant sex,Participant sex,Directly mapped
+BMI,Baseline BMI,Baseline BMI,Directly mapped
+Knee side,Left/right knee,Left/right knee,Directly mapped
+WOMAC pain,WOMAC pain at 24-month landmark and 0-24 month change,WOMAC pain at CHECK T2 and T0-T2 change,Approximately mapped
+WOMAC function,WOMAC function at 24-month landmark and 0-24 month change,WOMAC function at CHECK T2 and T0-T2 change,Approximately mapped
+KL grade,OAI radiographic KL grade at 24-month landmark,CHECK radiographic KL grade at T2,Approximately mapped
+KL change,24-month KL minus baseline KL,T2 KL minus T0 KL,Approximately mapped
+Medial JSN,OAI semiquantitative medial JSN at 24-month landmark,CHECK medial JSN at T2,Approximately mapped
+Medial JSN change,24-month medial JSN minus baseline medial JSN,T2 medial JSN minus T0 medial JSN,Approximately mapped
+TKA/KR outcome,Post-landmark side-specific KR/TKA,Post-landmark side-specific TKA through CHECK follow-up,Approximately mapped
+Follow-up time,Months after 24-month landmark,Months after CHECK T2 landmark,Approximately mapped

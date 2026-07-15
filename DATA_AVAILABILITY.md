@@ -17,7 +17,7 @@
 - image-level hardware observations or CPT-level records;
 - individual prediction vectors, resampling assignments, or follow-up records.
 
-OAI data must be obtained through the OAI data-access process. MRKR data are institutionally governed real-world clinical/imaging data. CHECK data remain subject to their source access terms. De-identification does not remove these contractual and governance restrictions.
+OAI data require an NDA account and acceptance of the applicable access terms through the [NIMH Data Archive](https://nda.nih.gov/oai/). The Emory Knee Radiograph (MRKR) dataset is documented by [Nightingale Open Science](https://docs.ngsci.org/datasets/mrkr-emory-xray/) and listed in the [Registry of Open Data on AWS](https://registry.opendata.aws/mrkr/); the hosted resource is marked as controlled access. CHECK data remain subject to study-specific approval and access conditions. De-identification does not remove these contractual and governance restrictions.
 
 ## Reproduction levels
 

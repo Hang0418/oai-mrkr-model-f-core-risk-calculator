@@ -105,6 +105,25 @@
       color: #52616b;
       background: white;
     }
+    a {
+      color: var(--blue);
+      text-underline-offset: 2px;
+    }
+    .badge a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .availability {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      color: #52616b;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+    .availability strong {
+      color: var(--navy);
+    }
     .formula {
       margin-top: 20px;
       font-size: 12px;
@@ -123,7 +142,7 @@
     <div>
       <span class="badge">Model version: F-core v1.0</span>
       <span class="badge">Formula basis: OAI Cox landmark model</span>
-      <span class="badge">GitHub: github.com/Hang0418/oai-mrkr-model-f-core-risk-calculator</span>
+      <span class="badge"><a href="https://github.com/Hang0418/oai-mrkr-model-f-core-risk-calculator">GitHub repository</a></span>
     </div>
 
     <div class="grid">
@@ -200,6 +219,13 @@
       Original OAI-derived risk = 1 - exp[-H0(24)*exp(LP)], H0(24)=0.003919.
       MRKR recalibrated risk = 1 - exp[-0.070564*exp(0.681400*LP)]. The primary MRKR implementation uses target-cohort pain standardization. Custom recalibration uses local pain mean/SD, slope, and baseline cumulative hazard.
     </p>
+    <div class="availability">
+      <strong>Data and code availability.</strong>
+      OAI data require authorized access through the <a href="https://nda.nih.gov/oai/">NIMH Data Archive</a>.
+      MRKR is documented by <a href="https://docs.ngsci.org/datasets/mrkr-emory-xray/">Nightingale Open Science</a> and listed in the <a href="https://registry.opendata.aws/mrkr/">Registry of Open Data on AWS</a>; the hosted resource is controlled access.
+      CHECK data are not redistributed and remain subject to study-specific approval.
+      Calculator source, model parameters, aggregate results, and reproducibility materials are available in the <a href="https://github.com/Hang0418/oai-mrkr-model-f-core-risk-calculator">public GitHub repository</a>.
+    </div>
   </main>
 
   <script>

@@ -90,7 +90,7 @@ Exact values are stored in [`data/model/`](data/model/).
 
 ## Reproducibility boundary
 
-All reported aggregate tables, model parameters, and final figures are public here. Raw and row-level OAI, MRKR, and CHECK data are not redistributed because they remain governed by their source data-use agreements and institutional controls.
+All reported aggregate tables, model parameters, and final figures are public here. Raw and row-level OAI, MRKR, and CHECK data are not redistributed because they remain governed by their source data-use agreements and institutional controls. OAI access is provided through the [NIMH Data Archive](https://nda.nih.gov/oai/). MRKR is documented by [Nightingale Open Science](https://docs.ngsci.org/datasets/mrkr-emory-xray/) and listed in the [Registry of Open Data on AWS](https://registry.opendata.aws/mrkr/), where the hosted resource is identified as controlled access.
 
 The scripts document the full local analysis pipeline. Steps that operate on row-level data require independently authorized local copies. See [`DATA_AVAILABILITY.md`](DATA_AVAILABILITY.md) and [`docs/reproducibility.md`](docs/reproducibility.md).
 

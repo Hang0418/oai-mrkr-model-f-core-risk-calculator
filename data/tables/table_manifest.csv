@@ -1,0 +1,24 @@
+section,table,part,file,title
+main,1,1,main_1.csv,Table 1. Characteristics of the OAI Model F-core development cohort and MRKR transport cohort at baseline and the 24-month landmark.
+main,2,1,main_2.csv,Table 2. OAI staged model performance and incremental value of longitudinal clinical-radiographic information.
+main,3,1,main_3.csv,Table 3. Transportability and updating validation of the OAI-derived Model F-core in MRKR at 24 months.
+main,4,1,main_4.csv,"Table 4. MRKR outcome-timing, early-detection, and higher-specificity sensitivity analyses."
+supplementary,s1,1,supplementary_s1.csv,Supplementary Table S1. Full coefficient estimates for the OAI dynamic Model E.
+supplementary,s2,1,supplementary_s2.csv,"Supplementary Table S2. Post-landmark follow-up, censoring, and outcome-ascertainment structure in OAI and MRKR."
+supplementary,s3,1,supplementary_s3.csv,"Supplementary Table S3. Coefficients, coding, and cross-cohort mapping for the OAI-derived Model F-core."
+supplementary,s4,1,supplementary_s4.csv,Supplementary Table S4. Detailed inclusion and exclusion flow for the OAI analytic cohorts.
+supplementary,s5,1,supplementary_s5.csv,Supplementary Table S5. Detailed inclusion and exclusion flow for the MRKR transport cohort.
+supplementary,s6,1,supplementary_s6.csv,"Supplementary Table S6. Confidence intervals for discrimination, calibration, and overall prediction performance."
+supplementary,s7,1,supplementary_s7_coefficients.csv,"Supplementary Table S7. Reproducible Model F-core formula, standardization parameters, and baseline cumulative hazards."
+supplementary,s7,2,supplementary_s7_pain_standardization.csv,"Supplementary Table S7. Reproducible Model F-core formula, standardization parameters, and baseline cumulative hazards."
+supplementary,s7,3,supplementary_s7_oai_baseline_hazard.csv,"Supplementary Table S7. Reproducible Model F-core formula, standardization parameters, and baseline cumulative hazards."
+supplementary,s7,4,supplementary_s7_mrkr_recalibration.csv,"Supplementary Table S7. Reproducible Model F-core formula, standardization parameters, and baseline cumulative hazards."
+supplementary,s8,1,supplementary_s8.csv,Supplementary Table S8. Schoenfeld residual diagnostics for OAI Model E.
+supplementary,s9,1,supplementary_s9.csv,Supplementary Table S9. Prediction performance of the original and time-varying coefficient versions of OAI Model E.
+supplementary,s10,1,supplementary_s10.csv,Supplementary Table S10. Predicted and observed 24-month risks across recalibrated MRKR risk strata.
+supplementary,s11,1,supplementary_s11.csv,Supplementary Table S11. Comparison of included and excluded OAI knees.
+supplementary,s12,1,supplementary_s12.csv,Supplementary Table S12. Comparison of included and excluded MRKR knees.
+supplementary,s13,1,supplementary_s13.csv,Supplementary Table S13. Secondary-horizon transport and apparent recalibration analyses in MRKR.
+supplementary,s14,1,supplementary_s14.csv,Supplementary Table S14. MRKR hardware outcome-timing and interval-censoring sensitivity analyses.
+supplementary,s15,1,supplementary_s15.csv,Supplementary Table S15. Pain-harmonization sensitivity analyses for MRKR transport.
+supplementary,s16,1,supplementary_s16.csv,Supplementary Table S16. Exploratory validation of an OAI-derived CHECK-compatible dynamic model.

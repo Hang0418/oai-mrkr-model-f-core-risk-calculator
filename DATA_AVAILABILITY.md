@@ -1,51 +1,27 @@
-# Data Availability and Public Release Boundary
+# Data availability and public-release boundary
 
-## Public Files Included
+## Included in this repository
 
-This release includes:
-
-- aggregate model performance tables;
-- aggregate calibration and recalibration tables;
-- model coefficients and baseline cumulative hazards;
-- public schema dictionaries;
-- publication figures;
-- analysis scripts;
+- exact Model F-core coefficients, pain-standardization parameters, OAI baseline cumulative hazards, and apparent MRKR recalibration parameters;
+- manuscript Tables 1-4 and Supplementary Tables S1-S16 as aggregate CSV files;
+- aggregate source data supporting the released figures;
+- final Figures 1-5 and Supplementary Figures S1-S10;
+- analysis and figure-generation code;
 - the static research-use calculator.
 
-These files are sufficient to inspect the reported formula, reproduce the calculator logic, review aggregate MRKR transport validation results, and regenerate manuscript figures from aggregate outputs.
+## Not redistributed
 
-## Files Intentionally Excluded
+- raw OAI, MRKR, or CHECK files;
+- row-level or knee-level analytic datasets;
+- patient, knee, examination, image, encounter, procedure, or date identifiers;
+- image-level hardware observations or CPT-level records;
+- individual prediction vectors, resampling assignments, or follow-up records.
 
-The following files are intentionally not included:
+OAI data require an NDA account and acceptance of the applicable access terms through the [NIMH Data Archive](https://nda.nih.gov/oai/). The Emory Knee Radiograph (MRKR) dataset is documented by [Nightingale Open Science](https://docs.ngsci.org/datasets/mrkr-emory-xray/) and listed in the [Registry of Open Data on AWS](https://registry.opendata.aws/mrkr/); the hosted resource is marked as controlled access. CHECK data remain subject to study-specific approval and access conditions. De-identification does not remove these contractual and governance restrictions.
 
-- raw OAI source files;
-- raw MRKR source files;
-- raw CHECK source files;
-- row-level OAI analytic datasets;
-- row-level MRKR analytic datasets;
-- combined row-level transport datasets;
-- any file containing patient identifiers, anonymized patient identifiers, dates, image-level records, encounter-level records, CPT line records, or individual-level follow-up rows.
+## Reproduction levels
 
-## Rationale
+1. **Public verification:** inspect exact formulas, aggregate tables, source-data summaries, and vector figures without restricted data.
+2. **Full local reproduction:** obtain authorized source data, reconstruct the documented local directory structure, and run the released analysis pipeline.
 
-Even when de-identified or anonymized, row-level clinical datasets can remain subject to data-use agreements, institutional governance, or re-identification risk. Public release is therefore limited to aggregate outputs and code. Users who need to reproduce the full pipeline from raw data should obtain the required source datasets and approvals independently, then run the scripts locally.
-
-## Public Data Inventory
-
-Aggregate public data are stored under:
-
-```text
-data/aggregate/
-data/dictionaries/
-```
-
-Restricted or local-only data should remain outside the repository under project directories such as:
-
-```text
-raw/
-derived/OAI/
-derived/MRKR/
-derived/transport/
-MRKR/tables/
-```
-
+No raw or row-level clinical data are required to use the static calculator.

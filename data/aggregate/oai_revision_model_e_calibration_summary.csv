@@ -1,2 +1,0 @@
-"model","horizon_months","mean_predicted_risk","observed_km_risk","calibration_slope_survival","note"
-"Model E",60,0.0990961754048794,0.104115856234941,0.999999998998834,"Calibration intercept for survival risk is approximated by mean predicted vs observed risk; full intercept requires a fixed-horizon model."

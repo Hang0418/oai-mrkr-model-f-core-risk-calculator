@@ -1,0 +1,2 @@
+"cohort","knees","participants","events_60m","mean_predicted_60m","observed_60m","observed_lower_95","observed_upper_95","oe_ratio","oe_lower_95","oe_upper_95","calibration_in_the_large","predicted_min","predicted_max"
+"CHECK exploratory validation",1712,860,26,0.032427170838253,0.0151869158878505,0.0103655375392757,0.0222255701156387,0.468339219711857,0.319655932704679,0.685399605981665,-0.767357479606378,0.00506428050811469,0.863159594739973

@@ -1,3 +1,0 @@
-"cohort","outcome","n_knees","n_patients","events_total","events_by_60m","c_index","auc_60m","brier_60m","mean_predicted_60m_risk","observed_km_60m_risk"
-"OAI apparent","KR/TKA after OAI 24m landmark",3104,1656,566,279,0.763168000146637,0.786661559095138,0.114108169795887,0.100464155674432,0.105224638077545
-"MRKR external primary hardware","Side-specific arthroplasty hardware after MRKR landmark",3412,2179,1140,1045,0.67568313933419,0.764600235767284,0.46546583654785,0.172427142002149,0.424602980476789

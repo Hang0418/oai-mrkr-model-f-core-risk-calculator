@@ -1,0 +1,3 @@
+Model,Time-varying terms,Time function,Evaluation,C-index,60-month AUC,60-month Brier,Calibration intercept,Calibration slope
+Original average-effect Model E Cox,None,Not applicable,Apparent fixed-horizon,0.770,0.797,0.109,-0.049,1.132
+Model E with prespecified time-varying coefficients,Age; baseline pain; 0–24 month function change; baseline KL; 0–24 month KL change; baseline medial JSN,"x × log(max[t, 0.1])",Apparent fixed-horizon sensitivity,0.770,0.801,0.108,-0.033,1.019

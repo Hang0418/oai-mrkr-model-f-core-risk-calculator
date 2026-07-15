@@ -1,9 +1,0 @@
-Item,OAI common-change model,CHECK exploratory validation
-"Knees, n",3068,1712
-"Participants, n",1642,860
-"Post-landmark TKA/KR events, n",560,28
-"60-month TKA/KR events, n",274,26
-C-index,0.768,0.787
-Mean predicted 60-month risk,9.9%,3.2%
-Observed 60-month risk,10.4%,1.5%
-Interpretation,Development/internal estimate,Exploratory validation; event-limited

@@ -23,7 +23,7 @@ This file is the release map for the current manuscript and supplement.
 
 ## Supplementary tables
 
-Supplementary Tables S1-S16 are under `data/tables/supplementary/`. Supplementary Table S7 has four machine-readable parts: coefficients, pain standardization, OAI baseline cumulative hazards, and apparent MRKR recalibration parameters.
+Supplementary Tables S1-S17 are under `data/tables/supplementary/`. Supplementary Table S7 has four machine-readable parts: coefficients, pain standardization, OAI baseline cumulative hazards, and apparent MRKR recalibration parameters. Supplementary Table S17 is the completed TRIPOD+AI reporting checklist and author action log.
 
 ## Supplementary figures
 

@@ -1,0 +1,17 @@
+Predictor,Chi-square,df,Schoenfeld P value,Evidence of non-proportionality
+Age,19.915,1,8.09e-06,Yes
+Female sex,2.565,1,0.109,No
+BMI,0.050,1,0.824,No
+Right knee,1.403,1,0.236,No
+Baseline WOMAC pain,4.552,1,0.033,Yes
+Baseline WOMAC function,2.860,1,0.091,No
+Baseline WOMAC stiffness,1.344,1,0.246,No
+0–24 month WOMAC pain change,2.710,1,0.100,No
+0–24 month WOMAC function change,8.006,1,0.005,Yes
+Baseline KL grade,5.547,1,0.019,Yes
+0–24 month KL change,4.566,1,0.033,Yes
+Baseline medial JSN,6.161,1,0.013,Yes
+0–24 month medial JSN change,2.619,1,0.106,No
+Baseline lateral JSN,0.350,1,0.554,No
+0–24 month lateral JSN change,0.035,1,0.852,No
+Global test,53.747,15,2.90e-06,Yes

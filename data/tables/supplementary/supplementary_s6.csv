@@ -1,0 +1,37 @@
+Analysis domain,Model/comparison,Horizon,Metric,Estimate,95% interval,Interval method
+OAI strictly nested models,Model A,Overall,C-index,0.539,0.509–0.571,500 patient-clustered bootstrap resamples
+OAI strictly nested models,Model A,60 months,Time-dependent AUC,0.535,0.491–0.578,500 patient-clustered bootstrap resamples
+OAI strictly nested models,Model B,Overall,C-index,0.636,0.610–0.661,500 patient-clustered bootstrap resamples
+OAI strictly nested models,Model B,60 months,Time-dependent AUC,0.654,0.617–0.692,500 patient-clustered bootstrap resamples
+OAI strictly nested models,Model C,Overall,C-index,0.717,0.693–0.738,500 patient-clustered bootstrap resamples
+OAI strictly nested models,Model C,60 months,Time-dependent AUC,0.731,0.698–0.762,500 patient-clustered bootstrap resamples
+OAI strictly nested models,Model D,Overall,C-index,0.738,0.714–0.760,500 patient-clustered bootstrap resamples
+OAI strictly nested models,Model D,60 months,Time-dependent AUC,0.759,0.726–0.791,500 patient-clustered bootstrap resamples
+OAI strictly nested models,Model E,Overall,C-index,0.770,0.747–0.792,500 patient-clustered bootstrap resamples
+OAI strictly nested models,Model E,60 months,Time-dependent AUC,0.797,0.769–0.826,500 patient-clustered bootstrap resamples
+OAI incremental value,Model B vs A,Overall,Delta C-index,0.097,0.066–0.130,Paired patient-clustered bootstrap
+OAI incremental value,Model B vs A,60 months,Delta AUC,0.119,0.072–0.168,Paired patient-clustered bootstrap
+OAI incremental value,Model C vs B,Overall,Delta C-index,0.081,0.055–0.106,Paired patient-clustered bootstrap
+OAI incremental value,Model C vs B,60 months,Delta AUC,0.077,0.043–0.115,Paired patient-clustered bootstrap
+OAI incremental value,Model D vs C,Overall,Delta C-index,0.021,0.011–0.031,Paired patient-clustered bootstrap
+OAI incremental value,Model D vs C,60 months,Delta AUC,0.028,0.013–0.043,Paired patient-clustered bootstrap
+OAI incremental value,Model E vs D,Overall,Delta C-index,0.032,0.020–0.047,Paired patient-clustered bootstrap
+OAI incremental value,Model E vs D,60 months,Delta AUC,0.037,0.017–0.059,Paired patient-clustered bootstrap
+OAI incremental value,Model E vs C,Overall,Delta C-index,0.054,0.039–0.070,Paired patient-clustered bootstrap
+OAI incremental value,Model E vs C,60 months,Delta AUC,0.065,0.044–0.089,Paired patient-clustered bootstrap
+MRKR direct transport,Original OAI-derived Model F-core,12 months,Time-dependent AUC,0.700,0.677–0.723,300 patient-clustered bootstrap resamples
+MRKR direct transport,Original OAI-derived Model F-core,24 months,Time-dependent AUC,0.709,0.686–0.731,300 patient-clustered bootstrap resamples
+MRKR direct transport,Original OAI-derived Model F-core,36 months,Time-dependent AUC,0.723,0.698–0.749,300 patient-clustered bootstrap resamples
+MRKR direct transport,Original OAI-derived Model F-core,60 months,Time-dependent AUC,0.766,0.734–0.798,300 patient-clustered bootstrap resamples
+MRKR direct transport,Original OAI-derived Model F-core,Overall,C-index,0.681,0.666–0.697,500 patient-clustered bootstrap resamples
+MRKR recalibration,Repeated 70/30 patient-level splits,24 months,Test-set AUC,0.709,0.676–0.742,Empirical 2.5th–97.5th percentiles across 100 splits
+MRKR recalibration,Repeated 70/30 patient-level splits,24 months,Test-set C-index,0.682,0.659–0.706,Empirical 2.5th–97.5th percentiles across 100 splits
+MRKR recalibration,Repeated 70/30 patient-level splits,24 months,Recalibration coefficient applied to the original linear predictor in training subsets,0.682,0.638–0.737,Empirical 2.5th–97.5th percentiles across 100 splits
+MRKR recalibration,Repeated 70/30 patient-level splits,24 months,Validation calibration slope in held-out patients,1.001,0.745–1.231,Empirical 2.5th–97.5th percentiles across 100 splits
+MRKR recalibration,Repeated 70/30 patient-level splits,24 months,Validation calibration intercept in held-out patients,0.004,-0.075–0.092,Empirical 2.5th–97.5th percentiles across 100 splits
+MRKR recalibration,Repeated 70/30 patient-level splits,24 months,Observed/expected risk ratio,1.010,0.957–1.086,Empirical 2.5th–97.5th percentiles across 100 splits
+MRKR recalibration,Repeated 70/30 patient-level splits,24 months,Integrated calibration index,0.025,0.010–0.043,Empirical 2.5th–97.5th percentiles across 100 splits
+MRKR recalibration,Repeated 70/30 patient-level splits,24 months,IPCW Brier score,0.262,0.244–0.283,Empirical 2.5th–97.5th percentiles across 100 splits
+MRKR recalibration,Repeated 70/30 patient-level splits,24 months,Index of prediction accuracy,0.098,0.060–0.129,Empirical 2.5th–97.5th percentiles across 100 splits
+MRKR direct transport,Original OAI-derived Model F-core,24 months,IPCW Brier score,0.359,—,Full-cohort point estimate using event-time-specific IPCW
+MRKR benchmark,Constant 24-month event-risk model,24 months,IPCW Brier score,0.291,—,Full-cohort point estimate

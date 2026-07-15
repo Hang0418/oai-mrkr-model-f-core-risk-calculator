@@ -1,3 +1,0 @@
-"model","n_knees","events","c_index","auc_60m"
-"Original Model E Cox",3066,559,0.770141924216318,0.796725385167596
-"Model E with time-varying coefficient terms",3066,559,0.75525373120314,0.799468036151453

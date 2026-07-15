@@ -121,7 +121,7 @@
     <h1>Model F-core research-use risk calculator</h1>
     <p class="subtitle">OAI-derived common-variable transport model with selectable local recalibration. This tool is for manuscript reproducibility, transport validation, and site-specific recalibration workflows.</p>
     <div>
-      <span class="badge">Model version: F-core v0.1</span>
+      <span class="badge">Model version: F-core v1.0</span>
       <span class="badge">Formula basis: OAI Cox landmark model</span>
       <span class="badge">GitHub: github.com/Hang0418/oai-mrkr-model-f-core-risk-calculator</span>
     </div>
@@ -147,10 +147,10 @@
         <input id="pain" type="number" min="0" max="10" step="0.1" value="6">
 
         <label for="kl0">Baseline Kellgren-Lawrence grade</label>
-        <input id="kl0" type="number" min="0" max="4" step="1" value="2">
+        <input id="kl0" type="number" min="0" max="4" step="1" value="3">
 
         <label for="kl24">24-month Kellgren-Lawrence grade</label>
-        <input id="kl24" type="number" min="0" max="4" step="1" value="3">
+        <input id="kl24" type="number" min="0" max="4" step="1" value="4">
 
         <label for="mode">Local recalibration mode</label>
         <select id="mode">
@@ -164,6 +164,12 @@
 
         <label for="customH0">Custom 24-month baseline cumulative hazard</label>
         <input id="customH0" type="number" min="0.0001" max="1" step="0.0001" value="0.0706">
+
+        <label for="customPainMean">Custom local pain mean</label>
+        <input id="customPainMean" type="number" min="0" max="10" step="0.001" value="3.376">
+
+        <label for="customPainSd">Custom local pain SD</label>
+        <input id="customPainSd" type="number" min="0.001" max="10" step="0.001" value="3.395">
       </section>
 
       <section>
@@ -177,6 +183,7 @@
           <div id="selectedRisk" class="risk recal">-</div>
           <div id="stratum" class="meta">Risk stratum: -</div>
           <div id="klwText" class="meta">KL worsening: -</div>
+          <div class="meta">In MRKR mode, this is the probability of first side-specific hardware-positive postoperative imaging, not an exact operation-date risk.</div>
         </div>
         <div class="result">
           <strong>Clinical interpretation</strong>
@@ -191,7 +198,7 @@
     <p class="formula">
       LP = 0.001641*age - 0.135838*female + 0.004416*right_knee + 0.290862*pain_z + 0.778458*baseline_KL + 1.019422*I(24-month KL - baseline KL >= 1).
       Original OAI-derived risk = 1 - exp[-H0(24)*exp(LP)], H0(24)=0.003919.
-      MRKR recalibrated risk = 1 - exp[-0.070564*exp(0.681400*LP)]. Custom recalibration uses the same slope plus baseline form.
+      MRKR recalibrated risk = 1 - exp[-0.070564*exp(0.681400*LP)]. The primary MRKR implementation uses target-cohort pain standardization. Custom recalibration uses local pain mean/SD, slope, and baseline cumulative hazard.
     </p>
   </main>
 
@@ -217,9 +224,9 @@
     }
     function riskStratum(x) {
       if (x < 0.10) return "<10%";
-      if (x < 0.25) return "10-25%";
-      if (x < 0.50) return "25-50%";
-      return ">50%";
+      if (x < 0.25) return "10-<25%";
+      if (x < 0.50) return "25-<50%";
+      return ">=50%";
     }
     function interpretation(x) {
       if (x < 0.10) return "Low recalibrated near-term risk stratum. Interpret only within a research validation workflow.";
@@ -250,7 +257,10 @@
       } else if (mode === "custom") {
         const slope = Number(document.getElementById("customSlope").value || recalSlope);
         const h0 = Number(document.getElementById("customH0").value || h0Mrkr24);
-        selectedRisk = 1 - Math.exp(-h0 * Math.exp(slope * lpMrkr));
+        const painMean = Number(document.getElementById("customPainMean").value || mrkrPainMean);
+        const painSd = Number(document.getElementById("customPainSd").value || mrkrPainSd);
+        const lpCustom = lp(painMean, Math.max(painSd, 0.001));
+        selectedRisk = 1 - Math.exp(-h0 * Math.exp(slope * lpCustom));
       } else {
         selectedRisk = 1 - Math.exp(-h0Mrkr24 * Math.exp(recalSlope * lpMrkr));
       }

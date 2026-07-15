@@ -1,0 +1,5 @@
+Outcome-timing definition,Knees,Total detections,Events/status by 24 months,C-index,24-month AUC,AUC 95% CI,24-month risk estimate,Risk 95% CI,Brier score,Analysis population,Interpretation
+First hardware-positive image (right endpoint),"3,412","1,140",855,0.681,0.709,0.686–0.731,28.0%,26.4%–29.6%,0.359,"All 3,412 knees",Exact/right-censored analysis
+Hardware-anchored; CPT-timed within the detection interval and ±90 days,"3,412","1,140",855,0.681,0.709,0.686–0.731,27.9%,26.3%–29.5%,0.358,"All 3,412 knees",Exact/right-censored analysis
+Midpoint of last-negative to first-positive interval,"3,412","1,140",885,0.681,0.709,0.685–0.732,28.5%,26.9%–30.1%,0.366,"All 3,412 knees",Exact/right-censored analysis
+Weibull interval-censored model,"3,412","1,140",855,—,0.714,—,31.1%,—,0.207,"2,301 knees with interval-identified 24-month status",Model-based risk; AUC/Brier among 2301 knees with interval-identified 24-month status

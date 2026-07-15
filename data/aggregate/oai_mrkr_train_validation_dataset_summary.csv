@@ -1,3 +1,0 @@
-cohort,split,mapped_knees,mapped_patients,core_complete_knees,core_complete_patients,primary_events_core,primary_event_rate_core,median_followup_months_core,median_baseline_to_landmark_months_core,age_mean_core,female_pct_core,pain_landmark_mean_core,kl_baseline_mean_core,kl_change_mean_core,extended_complete_knees
-OAI,train,8314,4218,3104,1656,566,0.18234536082474226,84.0,24.0,62.762242268041234,0.5911726804123711,1.4053640463917525,2.020296391752577,0.11436855670103092,3104
-MRKR,validation,9115,5162,3412,2179,1140,0.33411488862837047,19.975359342915812,25.00205338809035,63.86547479484174,0.7022274325908558,3.376318874560375,2.1916764361078545,0.18053927315357562,2387

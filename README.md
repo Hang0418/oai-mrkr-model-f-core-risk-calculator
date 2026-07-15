@@ -33,7 +33,7 @@ The repository mirrors the current manuscript and supplement.
 
 ### Supplement
 
-- Supplementary Tables S1-S16 are released as CSV files.
+- Supplementary Tables S1-S17 are released as CSV files.
 - Supplementary Figures S1-S10 are released as PNG, editable PDF, and editable SVG files.
 - CHECK appears only as an event-limited exploratory analysis in Supplementary Table S16 and Supplementary Figure S6.
 
@@ -46,7 +46,7 @@ assets/figures/main/            final Figures 1-5
 assets/figures/supplementary/   final Supplementary Figures S1-S10
 data/model/                     exact Model F-core and recalibration parameters
 data/tables/main/               manuscript Tables 1-4 as CSV
-data/tables/supplementary/      Supplementary Tables S1-S16 as CSV
+data/tables/supplementary/      Supplementary Tables S1-S17 as CSV
 data/source_data/               public aggregate figure source data
 data/dictionaries/              harmonization and variable dictionaries
 scripts/                        final analysis and figure-generation pipeline

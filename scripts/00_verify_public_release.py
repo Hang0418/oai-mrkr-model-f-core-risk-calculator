@@ -32,7 +32,7 @@ def main():
     main_groups = {row["table"] for row in rows if row["section"] == "main"}
     supplementary_groups = {row["table"] for row in rows if row["section"] == "supplementary"}
     require(main_groups == {"1", "2", "3", "4"}, f"Unexpected main table groups: {main_groups}")
-    require(supplementary_groups == {f"s{i}" for i in range(1, 17)}, "Supplementary table groups must be S1-S16")
+    require(supplementary_groups == {f"s{i}" for i in range(1, 18)}, "Supplementary table groups must be S1-S17")
     for row in rows:
         require((ROOT / "data/tables" / row["section"] / row["file"]).exists(), f"Missing table file: {row['file']}")
 

@@ -1,0 +1,53 @@
+﻿Section/topic,Item,Applies,TRIPOD+AI reporting criterion,Location in current report / compliance note
+Title,1,D;E,"Identify model development or evaluation, target population, and predicted outcome in the title.","Reported - title, p. 1."
+Abstract,2,D;E,Report the elements required by the TRIPOD+AI for Abstracts checklist.,"Reported - structured abstract, p. 1."
+Introduction,3a,D;E,"Explain the prognostic context and rationale, with reference to existing models.","Reported - Introduction, pp. 2-3."
+Introduction,3b,D;E,"Describe the target population, intended purpose, care-pathway context, and intended users.",Partial - purpose is described on p. 2 and in the research-use calculator; intended users and care pathway should be stated more explicitly.
+Introduction,3c,D;E,Describe known health inequalities across sociodemographic groups.,Partial - race/ethnicity differences are shown in Table 1 and subgroup performance in Supplementary Figure S5; implications for inequalities/fairness need fuller discussion.
+Introduction,4,D;E,"State objectives and whether the study concerns model development, evaluation, or both.","Reported - Abstract and Methods, pp. 1 and 3."
+Methods - data and participants,5a,D;E,"Describe development and evaluation data sources separately, including rationale and representativeness.","Reported - Methods, pp. 3-4; limitations on representativeness, p. 7."
+Methods - data and participants,5b,D;E,"Give participant accrual dates and, where applicable, the end of follow-up.",Partial - follow-up structure is reported in Supplementary Table S2; calendar accrual and administrative follow-up dates should be added.
+Methods - data and participants,6a,D;E,"Describe setting, number of centres, and locations.",Partial - cohort types are described on p. 3; centre counts and geographic settings should be stated explicitly.
+Methods - data and participants,6b,D;E,Describe participant eligibility criteria.,"Reported - Methods, p. 3; Figure 1; Supplementary Tables S4-S5."
+Methods - data and participants,6c,D;E,Describe relevant treatments and how they were handled.,Not applicable/clarify - treatment variables were not part of model development or evaluation; state this explicitly if confirmed.
+Methods - data and participants,7,D;E,"Describe preprocessing and quality checks, including consistency across sociodemographic groups.","Partial - harmonisation, standardisation, laterality, KL and hardware processing are described on pp. 3-5 and in Supplementary Tables S3/S7; group-specific QC is not reported."
+Methods - outcome and predictors,8a,D;E,"Define the predicted outcome, horizon, timing, assessment, rationale, and consistency across groups.","Reported - Methods, p. 4; Table 4; Figure 4; Supplementary Tables S2/S14."
+Methods - outcome and predictors,8b,D;E,"For subjective outcome assessment, describe assessor qualifications and demographic characteristics.","Partial/not applicable - OAI recorded replacement and MRKR used automated hardware labels; provenance is described, but assessor/algorithm validation details remain limited."
+Methods - outcome and predictors,8c,D;E,Report blinding of outcome assessment.,Not reported - add whether outcome ascertainment was independent of predictors/model scores.
+Methods - outcome and predictors,9a,D,Explain initial predictor selection and any preselection before model building.,"Reported - Methods, p. 4; staged Models A-E and the common-variable rationale are specified."
+Methods - outcome and predictors,9b,D;E,"Define all predictors, including how and when measured and any blinding.","Reported except blinding - Methods, p. 4; Supplementary Tables S1/S3/S7."
+Methods - outcome and predictors,9c,D;E,"For subjectively measured predictors, describe assessor qualifications and demographics.",Partial/not applicable - OAI central readings and MRKR model-inferred KL are identified; reader/algorithm validation details should be cited or expanded.
+Methods - outcome and predictors,10,D;E,"Explain and justify development and evaluation sample sizes, including calculations where applicable.",Not reported - add a formal sample-size/event-count justification or explain the fixed available-cohort design.
+Methods - outcome and predictors,11,D;E,Describe missing-data handling and reasons for omitted data.,"Reported - complete-case landmark approach, Figure 1, and Supplementary Tables S4-S5/S11-S12."
+Methods - analysis,12a,D,"Explain how data were used for model development and performance evaluation, including partitioning.","Reported - Methods, pp. 4-5."
+Methods - analysis,12b,D,"Describe predictor functional forms, transformations, rescaling, and standardisation.","Reported - Methods, p. 4; Supplementary Table S7."
+Methods - analysis,12c,D,"Specify model type, rationale, building steps, tuning, and internal validation.","Reported - Methods, pp. 4-5; Supplementary Tables S8-S9."
+Methods - analysis,12d,D;E,Describe how clustering and heterogeneity in parameters/performance were handled and quantified.,"Reported for participant/patient clustering - Methods, pp. 4-5; both knees were retained within all resamples/splits. Centre-level heterogeneity was not assessed."
+Methods - analysis,12e,D;E,Specify and justify all performance measures and plots.,"Reported - Methods, pp. 4-5; Tables 2-4; Figures 2-5."
+Methods - analysis,12f,E,Describe model updating or recalibration arising from evaluation.,"Reported - Methods, p. 5; Supplementary Table S7."
+Methods - analysis,12g,E,Describe how evaluation predictions were calculated.,"Reported - Methods, pp. 4-5; Supplementary Tables S3/S7; public code repository."
+Methods - analysis,13,D;E,"If class-imbalance methods were used, explain their use and subsequent recalibration.",Not applicable/clarify - no class rebalancing or weighting method is reported; explicitly state that none was used if confirmed.
+Methods - analysis,14,D;E,Describe approaches used to address model fairness and their rationale.,"Partial - demographic comparisons and subgroup AUCs are reported (Table 1; Supplementary Figure S5), but no prespecified fairness intervention or fairness metric was used."
+Methods - analysis,15,D,Specify model output and justify classifications or thresholds.,Reported - absolute risk output and exploratory risk strata in Supplementary Tables S7/S10 and the research-use calculator.
+Methods - analysis,16,D;E,"Identify differences between development and evaluation data in setting, eligibility, outcome, and predictors.","Reported - Methods, pp. 3-5; Table 1; Figure 4; Supplementary Table S3."
+Methods - analysis,17,D;E,Name ethics approval body and describe consent or waiver.,Not reported - author confirmation and approval/waiver identifiers are required before submission.
+Open science,18a,D;E,State funding sources and funder roles.,Not reported - add funding and the role of funders.
+Open science,18b,D;E,Declare conflicts of interest and financial disclosures for all authors.,Not reported - add a complete declaration.
+Open science,18c,D;E,State where the protocol is accessible or that none was prepared.,Not reported - add protocol availability or state that no protocol was prepared.
+Open science,18d,D;E,Provide study registration details or state that the study was not registered.,Not reported - add registration details or an explicit non-registration statement.
+Open science,18e,D;E,Describe study-data availability.,"Reported - Data and Code Availability, p. 18; official OAI, MRKR, and CHECK access conditions and the public-release boundary are specified."
+Open science,18f,D;E,Describe analytical-code availability.,"Reported - Data and Code Availability, p. 18; public GitHub repository and calculator."
+Patient and public involvement,19,D;E,Describe patient/public involvement or state that there was none.,Not reported - author confirmation is required.
+Results,20a,D;E,"Report participant flow, outcome counts, and follow-up summary.","Reported - Results, p. 6; Figure 1; Supplementary Tables S2/S4-S5."
+Results,20b,D;E,"Report cohort characteristics, dates, predictors, treatments, sample size, events, follow-up, missingness, and demographic differences.",Reported except calendar dates/treatments - Table 1; Supplementary Tables S2/S11-S12.
+Results,20c,E,Compare important predictor and outcome distributions between development and evaluation data.,Reported - Table 1; Figure 4; Supplementary Tables S2/S3.
+Results,21,D;E,Give participant and event counts for each analysis.,"Reported - Abstract, Results, Tables 1-4, and supplementary tables/figure legends."
+Results,22,D,"Provide the complete model so predictions can be reproduced, including access/reuse restrictions.","Reported - Supplementary Tables S1/S3/S7, nomogram, calculator, and public repository."
+Results,23a,D;E,"Report performance with confidence intervals, including key subgroups, with plots where useful.",Reported - Tables 2-4; Figures 2-5; Supplementary Table S6 and Figure S5.
+Results,23b,D;E,"If examined, report heterogeneity in performance across clusters.",Partial - participant clustering and demographic subgroup performance are reported; centre-level heterogeneity was not examined.
+Results,24,E,"Report model-updating results, the updated model, and subsequent performance.",Reported - Table 3; Figure 5; Supplementary Table S7.
+Discussion,25,D;E,"Interpret results in relation to objectives, previous studies, and fairness.",Partial - overall interpretation is reported on p. 7; fairness implications should be expanded.
+Discussion,26,D;E,"Discuss limitations and their effects on bias, uncertainty, and generalisability.","Reported - Discussion, p. 7."
+Discussion,27a,D,Explain how poor-quality or unavailable inputs should be handled in implementation.,Partial - calculator constrains input ranges and documents harmonisation; missing/invalid-input handling should be stated explicitly.
+Discussion,27b,D,Describe required user interaction and level of expertise.,Partial - research-use positioning is explicit; intended operator and required expertise are not fully specified.
+Discussion,27c,D;E,Describe future research for applicability and generalisability.,"Reported - Discussion, p. 7."

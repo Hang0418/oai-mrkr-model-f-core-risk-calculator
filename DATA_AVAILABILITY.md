@@ -3,7 +3,7 @@
 ## Included in this repository
 
 - exact Model F-core coefficients, pain-standardization parameters, OAI baseline cumulative hazards, and apparent MRKR recalibration parameters;
-- manuscript Tables 1-4 and Supplementary Tables S1-S16 as aggregate CSV files;
+- manuscript Tables 1-4 and Supplementary Tables S1-S17 as aggregate CSV files;
 - aggregate source data supporting the released figures;
 - final Figures 1-5 and Supplementary Figures S1-S10;
 - analysis and figure-generation code;

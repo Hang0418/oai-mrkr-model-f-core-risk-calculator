@@ -1,6 +1,0 @@
-Parameter,Value,Interpretation
-"Apparent MRKR recalibration coefficient, gamma",0.681400186,Fit in and evaluated on the full MRKR cohort
-Apparent MRKR H0(12),0.047074016,Uncentered updated linear predictor
-Apparent MRKR H0(24),0.070563879,Uncentered updated linear predictor
-Apparent MRKR H0(60),0.126446292,Uncentered updated linear predictor
-"Training-split gamma, mean (empirical 95% interval)",0.681966 (0.638109–0.737258),No single deployable held-out parameter; each split used its training-only gamma and H0

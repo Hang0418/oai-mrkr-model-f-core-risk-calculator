@@ -1,7 +1,0 @@
-Predictor,Coding/reference,Beta
-Age,per year,0.001641
-Female sex,female vs male,-0.135838
-Right knee,right vs left,0.004416
-Standardized landmark pain,per 1 SD,0.290862
-Baseline KL grade,per grade,0.778458
-KL worsening,≥1 grade vs none,1.019422

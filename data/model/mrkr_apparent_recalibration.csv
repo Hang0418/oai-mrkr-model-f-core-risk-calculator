@@ -1,2 +1,0 @@
-"model","intercept_note","slope","baseline_cumulative_hazard_12m","baseline_cumulative_hazard_24m","baseline_cumulative_hazard_60m"
-"MRKR slope plus baseline recalibration","Implemented as a Cox recalibration model fit in MRKR: Surv(time,event) ~ lp_f",0.681400186474898,0.0470740163369364,0.0705638786413772,0.126446291805488

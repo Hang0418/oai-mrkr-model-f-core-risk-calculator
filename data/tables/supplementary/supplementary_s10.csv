@@ -1,5 +1,0 @@
-Exploratory risk category,Knees,Patients*,Events by 24 months,Mean pooled OOS predicted risk,Observed risk,Observed 95% CI,O/E ratio,Observed minus predicted
-Low (<10%),302,251,17,6.9%,6.7%,3.6%–9.9%,0.980,-0.1 pp
-Intermediate (10-<25%),"1,377","1,059",194,17.8%,16.3%,14.2%–18.5%,0.916,-1.5 pp
-High (25-<50%),"1,409","1,131",492,35.7%,38.2%,35.4%–40.9%,1.070,+2.5 pp
-Very high (>=50%),324,268,152,55.5%,50.9%,45.0%–56.8%,0.917,-4.6 pp

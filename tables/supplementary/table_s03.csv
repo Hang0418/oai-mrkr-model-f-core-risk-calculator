@@ -1,0 +1,4 @@
+﻿Cohort,Endpoint,Knees,Patients,Events,Model complexity,Final model,Validation approach
+CHECK,24-month incident KL ≥2,1598,853,185,8 predictor parameters plus intercept,Penalized logistic regression; C=0.03,Patient-grouped nested CV for tuning; patient-grouped OOF validation
+OAI,60-month target-knee TKA/KR,2415,1310,279,7 predictor parameters plus intercept,Penalized logistic regression; C=0.03,Patient-grouped nested CV for tuning; patient-grouped OOF validation
+MRKR,24/36-month arthroplasty,"2,363 / 1,944","1,588 / 1,359",855 / 935,2 recalibration parameters per horizon,Fixed OAI linear predictor plus alpha/beta recalibration,Patient-grouped out-of-fold target-cohort recalibration

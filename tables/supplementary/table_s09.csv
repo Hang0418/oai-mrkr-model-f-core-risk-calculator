@@ -1,0 +1,7 @@
+﻿variable,available_96m_knees,missing_96m_knees,available_96m,missing_96m,smd_available_minus_missing
+Age,1493,225,55.6 (5.1),56.9 (5.7),-0.233
+Female,1493,225,1174 (78.6%),172 (76.4%),0.052
+BMI,1493,225,26.1 (4.0),26.0 (3.8),0.020
+Baseline WOMAC pain,1493,225,4.9 (3.4),5.0 (3.8),-0.030
+Baseline WOMAC function,1493,225,15.6 (11.4),15.5 (13.5),0.007
+Baseline KL1,1493,225,455 (30.5%),89 (39.6%),-0.191

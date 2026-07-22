@@ -1,5 +1,0 @@
-horizon_months,auc,lower_95,upper_95,events,at_risk,evaluation,interval_method
-12,0.8438683712121212,0.7748995052686861,0.909582919610114,44,3009,Pooled participant-level 10-fold out-of-sample predictions,500 participant-clustered bootstrap resamples
-24,0.822262420259811,0.7776723081881705,0.8675431211833484,101,2823,Pooled participant-level 10-fold out-of-sample predictions,500 participant-clustered bootstrap resamples
-36,0.7997450402802884,0.7600115827609351,0.8379451955391751,156,2419,Pooled participant-level 10-fold out-of-sample predictions,500 participant-clustered bootstrap resamples
-60,0.7899110939311944,0.7622539562862699,0.8181605609738183,273,2117,Pooled participant-level 10-fold out-of-sample predictions,500 participant-clustered bootstrap resamples

@@ -1,7 +1,0 @@
-Predictor,Coding/reference,Beta,HR,95% CI,OAI definition,MRKR definition,Cross-cohort mapping note
-Age,per year,0.001641,1.002,0.991–1.012,Baseline age,Age at baseline examination,Direct mapping
-Female sex,female vs male,-0.135838,0.873,0.706–1.079,Participant sex,Patient sex,Direct mapping
-Right knee,right vs left,0.004416,1.004,0.879–1.148,Target-knee side,Imaging laterality,Direct after L/R/B resolution
-Standardized landmark pain,per 1 SD,0.290862,1.338,1.235–1.449,WOMAC pain rescaled to 0–10,0–10 pain score,Approximate; cohort-specific z score in primary analysis
-Baseline KL grade,per grade,0.778458,2.178,1.921–2.469,Central semiquantitative KL,Model-inferred KL,Approximate mapping
-KL worsening,≥1 grade vs none,1.019422,2.772,2.197–3.497,24-month minus baseline central KL,Landmark minus baseline inferred KL,Approximate mapping

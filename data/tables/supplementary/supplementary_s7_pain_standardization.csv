@@ -1,3 +1,0 @@
-Cohort,Pain mean,Pain SD,Implementation note
-OAI training,1.405364,1.737796,Frozen OAI transformation: z=(pain−1.405364)/1.737796
-MRKR validation,3.376319,3.394548,Primary harmonization adaptation: z=(pain−3.376319)/3.394548; uses target-cohort distribution

@@ -1,0 +1,10 @@
+﻿Panel,Analysis/measure,Entry state or comparison,Predictor window,Outcome/result,Role
+A. Stage-specific design,CHECK primary,Symptomatic KL0/1 knees,Baseline,Incident KL >=2 at 24 m,Early structural-transition prediction
+A. Stage-specific design,CHECK extensions,Same as CHECK primary,Baseline,Incident KL >=2 at 60/96 m,Time-extension analyses
+A. Stage-specific design,OAI bridge,Baseline KL0/1 or KL2,Baseline,Incident KL >=2 / state alignment,Bridge evidence
+A. Stage-specific design,OAI model,24-month landmark knees,Baseline plus 0-24 m,TKA/KR within 60 m,Development and internal validation
+A. Stage-specific design,MRKR,Index radiograph,Harmonized index variables,Hardware arthroplasty at 24/36 m,Transport and recalibration
+B. Bridge evidence,CHECK bridge-state set,"60-month bridge-state set, n=400",Baseline KL0/1 to 60 m,KL2 374 (93.5%); KL3 18 (4.5%); KL5/TKA 8 (2.0%),Supports KL >=2 as radiographic connection point
+B. Bridge evidence,Clinical non-exchangeability,CHECK bridge-state knees vs OAI baseline KL2 knees,Bridge-state comparison,SMDs: age -0.79; female 0.38; BMI -0.61; pain 0.64; function 0.55,Shows radiographic alignment does not imply cohort exchangeability
+B. Bridge evidence,Directional replication,OAI baseline KL0/1 pain-KL groups,Baseline,"24-m risks: 2.8%, 3.3%, 10.6%, 15.0%",Replicates risk ordering rather than absolute CHECK risks
+B. Bridge evidence,OAI KL-TKA/KR gradient,"OAI 24-month landmark KL0/1, KL2, KL3, KL4",24-month landmark,"Observed 60-m risks: 3.4%, 6.7%, 17.5%, 35.1%; adjusted ORs KL2 2.02, KL3 5.95, KL4 15.21",Links radiographic severity to downstream arthroplasty risk

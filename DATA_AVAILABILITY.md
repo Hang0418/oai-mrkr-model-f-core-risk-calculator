@@ -2,12 +2,11 @@
 
 ## Included in this repository
 
-- exact Model F-core coefficients, pain-standardization parameters, OAI baseline cumulative hazards, and apparent MRKR recalibration parameters;
-- manuscript Tables 1-4 and Supplementary Tables S1-S17 as aggregate CSV files;
-- aggregate source data supporting the released figures;
-- final Figures 1-5 and Supplementary Figures S1-S10;
-- analysis and figure-generation code;
-- the static research-use calculator.
+- manuscript Figures 1-5 and Supplementary Figures S1-S14 as PNG/PDF files;
+- manuscript Tables 1-3 and Supplementary Tables S1-S24 as aggregate CSV files after the final consistency revision;
+- scripts used to prepare figure/table assets, clinical-translation analyses, and the static web calculator;
+- calculator screenshots used for Supplementary Figure S14;
+- the static two-module research-use calculator.
 
 ## Not redistributed
 
@@ -21,7 +20,7 @@ OAI data require an NDA account and acceptance of the applicable access terms th
 
 ## Reproduction levels
 
-1. **Public verification:** inspect exact formulas, aggregate tables, source-data summaries, and vector figures without restricted data.
+1. **Public verification:** inspect aggregate figure/table outputs, calculator logic, and public reproducibility scripts without restricted data.
 2. **Full local reproduction:** obtain authorized source data, reconstruct the documented local directory structure, and run the released analysis pipeline.
 
 No raw or row-level clinical data are required to use the static calculator.

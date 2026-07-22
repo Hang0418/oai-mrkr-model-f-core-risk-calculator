@@ -1,0 +1,5 @@
+﻿Calculator module,Verification case,Input values,Source formula probability,Calculator probability,Absolute difference
+CHECK,Low-risk early OA,Age=52; Female sex=1; Right knee=0; Pain score=2; Baseline KL1=0; BMI=24; WOMAC function=8; Baseline knee pain flag=1,0.03615383322481617,0.03615383322481617,0.0
+CHECK,Higher-risk early OA,Age=60; Female sex=1; Right knee=1; Pain score=8; Baseline KL1=1; BMI=30; WOMAC function=28; Baseline knee pain flag=1,0.4028190582501185,0.4028190582501185,0.0
+OAI,Low-risk established module,"Age=55; Female sex=0; Right knee=0; Pain score=0.5; KL grade=2; Pain change, 0–24 months=-1; KL change, 0–24 months=0",0.0424161521842786,0.0424161521842786,0.0
+OAI,Higher-risk established module,"Age=72; Female sex=1; Right knee=1; Pain score=5; KL grade=4; Pain change, 0–24 months=2; KL change, 0–24 months=1",0.551747253832646,0.551747253832646,0.0

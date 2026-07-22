@@ -1,0 +1,5 @@
+﻿analysis,pain_variable,scale,cutoff_rule,numeric_cutoff,high_pain_knees,analytic_knees
+CHECK pain/KL display groups,baseline_womac_pain,CHECK original WOMAC pain 0-20; higher=worse,High pain defined as > cohort median in baseline KL0/1 analytic population,4.00,835.00,1675
+CHECK 24m final model input,pain,CHECK analysis dataset retains original WOMAC pain scale used by the model script,Continuous model predictor; dichotomy used only for display groups,,,1598
+OAI early KL0/1 directional replication,baseline_womac_pain_num,OAI baseline WOMAC pain 0-20; higher=worse,High pain defined as > OAI KL0/1 subgroup median in bridge script,1.00,296.00,776
+OAI/MRKR transportable arthroplasty model,pain_landmark_0_10,Harmonized 0-10 pain score; higher=worse,Continuous deployable model input; display strata use clinically labelled bins when needed,,,3104

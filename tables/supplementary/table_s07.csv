@@ -1,0 +1,10 @@
+﻿Horizon,Comparison,Adjusted OR (95% CI),P value,Reference
+24 months,High pain / KL0,2.71 (1.41–5.20),0.003,Low pain / KL0
+24 months,Low pain / KL1,10.94 (5.87–20.40),<0.001,Low pain / KL0
+24 months,High pain / KL1,17.30 (9.40–31.84),<0.001,Low pain / KL0
+60 months,High pain / KL0,1.97 (1.35–2.85),<0.001,Low pain / KL0
+60 months,Low pain / KL1,6.07 (4.08–9.03),<0.001,Low pain / KL0
+60 months,High pain / KL1,6.82 (4.54–10.24),<0.001,Low pain / KL0
+96 months,High pain / KL0,1.66 (1.21–2.28),0.002,Low pain / KL0
+96 months,Low pain / KL1,5.21 (3.59–7.56),<0.001,Low pain / KL0
+96 months,High pain / KL1,5.47 (3.73–8.01),<0.001,Low pain / KL0

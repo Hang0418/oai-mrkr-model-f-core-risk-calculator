@@ -1,4 +1,0 @@
-definition,n_knees,events_by_24m,auc_24m,auc_lower_95,auc_upper_95,panel
-First hardware-positive image (right endpoint),3412,855,0.708841345184358,0.685971787770588,0.730810699797044,b
-Hardware-anchored; CPT-timed within the detection interval and +/-90 days,3412,855,0.708841345184358,0.685971787770588,0.730810699797044,b
-Midpoint of last-negative to first-positive interval,3412,885,0.709109500546624,0.685483963953342,0.731777610612888,b

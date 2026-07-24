@@ -4,6 +4,7 @@
 
 - manuscript Figures 1-5 and Supplementary Figures S1-S14 as PNG/PDF files;
 - manuscript Tables 1-3 and Supplementary Tables S1-S24 as aggregate CSV files after the final consistency revision;
+- scripts used to prepare figure/table assets, clinical-translation analyses, and the static web calculator;
 - calculator screenshots used for Supplementary Figure S14;
 - the static two-module research-use calculator.
 

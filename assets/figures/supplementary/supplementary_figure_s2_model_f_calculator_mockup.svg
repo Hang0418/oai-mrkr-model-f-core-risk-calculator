@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="494.28pt" height="302.688pt" viewBox="0 0 494.28 302.688" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-15T14:44:22.260062</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 302.688 
+L 494.28 302.688 
+L 494.28 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 26.3952 255.704256 
+L 223.146 255.704256 
+Q 228.90456 255.704256 228.90456 252.2448 
+L 228.90456 61.97472 
+Q 228.90456 58.515264 223.146 58.515264 
+L 26.3952 58.515264 
+Q 20.63664 58.515264 20.63664 61.97472 
+L 20.63664 252.2448 
+Q 20.63664 255.704256 26.3952 255.704256 
+z
+" clip-path="url(#p4afe41aa81)" style="fill: #f8fafc; stroke: #cbd5e1; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 146.3652 103.77648 
+L 201.5514 103.77648 
+Q 207.30996 103.77648 207.30996 100.317024 
+L 207.30996 87.055776 
+Q 207.30996 83.59632 201.5514 83.59632 
+L 146.3652 83.59632 
+Q 140.60664 83.59632 140.60664 87.055776 
+L 140.60664 100.317024 
+Q 140.60664 103.77648 146.3652 103.77648 
+z
+" clip-path="url(#p4afe41aa81)" style="fill: #ffffff; stroke: #cbd5e1; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 146.3652 124.533216 
+L 201.5514 124.533216 
+Q 207.30996 124.533216 207.30996 121.07376 
+L 207.30996 107.812512 
+Q 207.30996 104.353056 201.5514 104.353056 
+L 146.3652 104.353056 
+Q 140.60664 104.353056 140.60664 107.812512 
+L 140.60664 121.07376 
+Q 140.60664 124.533216 146.3652 124.533216 
+z
+" clip-path="url(#p4afe41aa81)" style="fill: #ffffff; stroke: #cbd5e1; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 146.3652 145.289952 
+L 201.5514 145.289952 
+Q 207.30996 145.289952 207.30996 141.830496 
+L 207.30996 128.569248 
+Q 207.30996 125.109792 201.5514 125.109792 
+L 146.3652 125.109792 
+Q 140.60664 125.109792 140.60664 128.569248 
+L 140.60664 141.830496 
+Q 140.60664 145.289952 146.3652 145.289952 
+z
+" clip-path="url(#p4afe41aa81)" style="fill: #ffffff; stroke: #cbd5e1; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 146.3652 166.046688 
+L 201.5514 166.046688 
+Q 207.30996 166.046688 207.30996 162.587232 
+L 207.30996 149.325984 
+Q 207.30996 145.866528 201.5514 145.866528 
+L 146.3652 145.866528 
+Q 140.60664 145.866528 140.60664 149.325984 
+L 140.60664 162.587232 
+Q 140.60664 166.046688 146.3652 166.046688 
+z
+" clip-path="url(#p4afe41aa81)" style="fill: #ffffff; stroke: #cbd5e1; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 146.3652 186.803424 
+L 201.5514 186.803424 
+Q 207.30996 186.803424 207.30996 183.343968 
+L 207.30996 170.08272 
+Q 207.30996 166.623264 201.5514 166.623264 
+L 146.3652 166.623264 
+Q 140.60664 166.623264 140.60664 170.08272 
+L 140.60664 183.343968 
+Q 140.60664 186.803424 146.3652 186.803424 
+z
+" clip-path="url(#p4afe41aa81)" style="fill: #ffffff; stroke: #cbd5e1; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 146.3652 207.56016 
+L 201.5514 207.56016 
+Q 207.30996 207.56016 207.30996 204.100704 
+L 207.30996 190.839456 
+Q 207.30996 187.38 201.5514 187.38 
+L 146.3652 187.38 
+Q 140.60664 187.38 140.60664 190.839456 
+L 140.60664 204.100704 
+Q 140.60664 207.56016 146.3652 207.56016 
+z
+" clip-path="url(#p4afe41aa81)" style="fill: #ffffff; stroke: #cbd5e1; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 146.3652 228.316896 
+L 201.5514 228.316896 
+Q 207.30996 228.316896 207.30996 224.85744 
+L 207.30996 211.596192 
+Q 207.30996 208.136736 201.5514 208.136736 
+L 146.3652 208.136736 
+Q 140.60664 208.136736 140.60664 211.596192 
+L 140.60664 224.85744 
+Q 140.60664 228.316896 146.3652 228.316896 
+z
+" clip-path="url(#p4afe41aa81)" style="fill: #ffffff; stroke: #cbd5e1; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 261.5364 128.857536 
+L 463.086 128.857536 
+Q 468.84456 128.857536 468.84456 125.39808 
+L 468.84456 67.74048 
+Q 468.84456 64.281024 463.086 64.281024 
+L 261.5364 64.281024 
+Q 255.77784 64.281024 255.77784 67.74048 
+L 255.77784 125.39808 
+Q 255.77784 128.857536 261.5364 128.857536 
+z
+" clip-path="url(#p4afe41aa81)" style="fill: #eef4ff; stroke: #9cb8de; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 261.5364 195.163776 
+L 463.086 195.163776 
+Q 468.84456 195.163776 468.84456 191.70432 
+L 468.84456 142.69536 
+Q 468.84456 139.235904 463.086 139.235904 
+L 261.5364 139.235904 
+Q 255.77784 139.235904 255.77784 142.69536 
+L 255.77784 191.70432 
+Q 255.77784 195.163776 261.5364 195.163776 
+z
+" clip-path="url(#p4afe41aa81)" style="fill: #eaf7f4; stroke: #8bc7b8; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 261.5364 252.821376 
+L 463.086 252.821376 
+Q 468.84456 252.821376 468.84456 249.36192 
+L 468.84456 209.0016 
+Q 468.84456 205.542144 463.086 205.542144 
+L 261.5364 205.542144 
+Q 255.77784 205.542144 255.77784 209.0016 
+L 255.77784 249.36192 
+Q 255.77784 252.821376 261.5364 252.821376 
+z
+" clip-path="url(#p4afe41aa81)" style="fill: #fff1f1; stroke: #b64040; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #17324d" x="26.3952" y="24.49728" transform="rotate(-0 26.3952 24.49728)">Model F-core research-use risk calculator</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #667085" x="26.3952" y="38.91168" transform="rotate(-0 26.3952 38.91168)">OAI-derived common-variable model with optional imaging-setting recalibration</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #17324d" x="43.191" y="73.50624" transform="rotate(-0 43.191 73.50624)">Inputs</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #17324d" x="43.191" y="95.756634" transform="rotate(-0 43.191 95.756634)">Age, years</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #17324d" x="173.9583" y="96.336009" transform="rotate(-0 173.9583 96.336009)">64</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #17324d" x="43.191" y="116.513448" transform="rotate(-0 43.191 116.513448)">Sex</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #17324d" x="173.9583" y="117.08337" transform="rotate(-0 173.9583 117.08337)">Female</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #17324d" x="43.191" y="137.270184" transform="rotate(-0 43.191 137.270184)">Knee side</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #17324d" x="173.9583" y="137.094794" transform="rotate(-0 173.9583 137.094794)">Right</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #17324d" x="43.191" y="158.026921" transform="rotate(-0 43.191 158.026921)">Pain score, 0–10</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #17324d" x="173.9583" y="158.606217" transform="rotate(-0 173.9583 158.606217)">6</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #17324d" x="43.191" y="178.783578" transform="rotate(-0 43.191 178.783578)">Baseline KL grade</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #17324d" x="173.9583" y="179.361196" transform="rotate(-0 173.9583 179.361196)">3</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #17324d" x="43.191" y="199.540314" transform="rotate(-0 43.191 199.540314)">24-month KL grade</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #17324d" x="173.9583" y="200.15426" transform="rotate(-0 173.9583 200.15426)">4</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 8px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #17324d" x="43.191" y="220.29705" transform="rotate(-0 43.191 220.29705)">KL worsening</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #17324d" x="173.9583" y="220.121738" transform="rotate(-0 173.9583 220.121738)">Auto: yes</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #17324d" transform="translate(299.046825 89.438186)">Original OAI-derived estimate</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #17324d" transform="translate(277.783622 98.957092)">24-month knee-replacement risk: 21.0%</text>
+    <text style="font-weight: 700; font-size: 9px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #17324d" transform="translate(277.783622 108.416936)">60-month knee-replacement risk: 52.7%</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #17324d" transform="translate(290.059208 160.413121)">MRKR imaging-setting recalibration</text>
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #17324d" transform="translate(279.418934 170.17152)">24-month hardware-detection risk: 54.8%</text>
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #17324d" transform="translate(267.607255 178.281715)">Research interpretation: very high risk stratum</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #17324d" transform="translate(324.1262 220.648869)">RESEARCH USE ONLY</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #17324d" transform="translate(286.467841 228.009807)">Not validated for individual clinical decisions.</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #17324d" transform="translate(268.763309 234.675119)">Hardware-detection risk is not exact operation-date risk.</text>
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; fill: #17324d" transform="translate(284.517138 242.032776)">Local validation and recalibration are required.</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #667085" x="261.5364" y="265.21776" transform="rotate(-0 261.5364 265.21776)">Model F-core v1.0 | Formula: OAI Cox model + target-setting recalibration</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #667085" x="261.5364" y="273.8664" transform="rotate(-0 261.5364 273.8664)">GitHub: Hang0418/oai-mrkr-model-f-core-risk-calculator</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p4afe41aa81">
+   <rect x="7.2" y="7.2" width="479.88" height="288.288"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,8 +1,0 @@
-﻿Term,Median coefficient,2.5th percentile,97.5th percentile,"Sign consistency, %",Bootstrap repetitions,Note
-age,0.23575900239182276,0.09013397940028413,0.38891894271538974,100.0,200,Ridge-penalized model; coefficients are shrunken but not selected to exact zero.
-female,0.035696849198740846,-0.1112594685747858,0.21413778063314853,67.5,200,Ridge-penalized model; coefficients are shrunken but not selected to exact zero.
-right_knee,-0.05526208458955752,-0.1456040129359434,0.04814183010574616,83.0,200,Ridge-penalized model; coefficients are shrunken but not selected to exact zero.
-pain_landmark_0_10,0.4642491363708139,0.3355447932557084,0.5990184908377427,100.0,200,Ridge-penalized model; coefficients are shrunken but not selected to exact zero.
-kl_landmark,0.9515786317463035,0.7685332267569271,1.1558066747173095,100.0,200,Ridge-penalized model; coefficients are shrunken but not selected to exact zero.
-pain_change_0_10,-0.00045043685970476486,-0.14311135736306896,0.1221012877505274,50.5,200,Ridge-penalized model; coefficients are shrunken but not selected to exact zero.
-kl_change,0.11747752167625004,0.009428286843972086,0.22050904166845556,98.0,200,Ridge-penalized model; coefficients are shrunken but not selected to exact zero.

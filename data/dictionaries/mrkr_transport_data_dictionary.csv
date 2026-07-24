@@ -1,0 +1,22 @@
+variable,definition
+empi_anon,MRKR de-identified patient identifier.
+knee_id,MRKR knee-level identifier constructed as MRKR_<empi_anon>_<side>.
+side,Target knee side: L or R.
+age,Age at landmark radiograph.
+female,"1 for female, 0 for male."
+baseline_date,Earliest side-specific radiograph date with inferred KL and no arthroplasty hardware.
+landmark_date,Radiograph closest to 24 months after baseline within the 18-36 month window.
+baseline_to_landmark_months,Observed months between baseline and landmark radiographs.
+pain_0,Nearest 0-10 knee pain score within 180 days of baseline. Bilateral scores are mapped to both knees.
+pain_24,Nearest 0-10 knee pain score within 180 days of landmark.
+pain_change,pain_24 minus pain_0.
+pain_24_group,"Landmark pain severity group: 0, 1-3, 4-6, or 7-10."
+kl_0,Baseline side-specific MRKR model-inferred Kellgren-Lawrence grade.
+kl_24,Landmark side-specific MRKR model-inferred Kellgren-Lawrence grade.
+kl_change,kl_24 minus kl_0.
+event_hardware_after_landmark,Primary knee-side outcome: arthroplasty hardware first observed on target knee after landmark.
+time_hardware_months,Months from landmark to hardware event or last target-knee radiograph.
+cpt_arthroplasty_after_landmark,"Sensitivity patient-level outcome: knee arthroplasty CPT code after landmark, not side-specific."
+cpt_primary_tka_after_landmark,"Sensitivity patient-level outcome: CPT 27447 after landmark, not side-specific."
+time_cpt_months,Months from landmark to first knee arthroplasty CPT event or last CPT record.
+model_f_complete,Complete-case flag for Model F transport variables and positive hardware follow-up time.

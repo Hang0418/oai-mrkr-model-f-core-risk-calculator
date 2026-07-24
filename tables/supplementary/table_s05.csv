@@ -1,5 +1,0 @@
-﻿analysis,radiograph_origin,columns_used,time_origin,clinical_interpretation
-OAI early bridge directional replication,Baseline screening/radiograph KL and exact 24-month follow-up KL,xray_sq_v00xrkl_num -> xray_24m_v03xrkl_num,OAI baseline,Early KL0/1 to incident definite radiographic OA at 24 months
-OAI arthroplasty model development,24-month landmark KL,kl_landmark in oai_plan_model_f_core.csv,OAI 24-month landmark,Predicts target-knee TKA/KR within 60 months after landmark
-OAI downstream KL-risk gradient in bridge figure,Baseline KL in the current bridge script; landmark KL sensitivity added here,kl_baseline and kl_landmark,Baseline for original gradient; 24-month landmark for sensitivity,Shows increasing surgical risk across radiographic states; manuscript should label baseline vs landmark explicitly
-MRKR transport/recalibration,Closest radiograph to 24-month landmark window,kl_landmark in mrkr_plan_model_f_core.csv,MRKR landmark radiograph,Transport of OAI prognostic index to 24/36-month real-world arthroplasty horizons

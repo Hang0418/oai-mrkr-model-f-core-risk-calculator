@@ -1,0 +1,9 @@
+Cohort,Endpoint,Event-time definition,"Horizon, months",At risk,Cumulative events,Censored before horizon,Observed risk,95% CI
+OAI,Recorded target-knee replacement,Recorded replacement date,12,"3,045",45,14,1.5%,1.1%–1.9%
+OAI,Recorded target-knee replacement,Recorded replacement date,24,"2,856",103,145,3.4%,2.8%–4.1%
+OAI,Recorded target-knee replacement,Recorded replacement date,36,"2,445",160,499,5.6%,4.8%–6.5%
+OAI,Recorded target-knee replacement,Recorded replacement date,60,"2,136",279,689,10.5%,9.4%–11.8%
+MRKR,First side-matched hardware-positive image,Detection time/right endpoint; not the operation date,12,"2,308",656,448,20.0%,18.6%–21.4%
+MRKR,First side-matched hardware-positive image,Detection time/right endpoint; not the operation date,24,"1,508",855,"1,049",28.0%,26.4%–29.7%
+MRKR,First side-matched hardware-positive image,Detection time/right endpoint; not the operation date,36,"1,009",935,"1,468",32.5%,30.7%–34.3%
+MRKR,First side-matched hardware-positive image,Detection time/right endpoint; not the operation date,60,483,"1,045","1,884",42.5%,40.2%–44.8%

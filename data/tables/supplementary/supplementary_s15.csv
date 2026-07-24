@@ -1,0 +1,4 @@
+Pain harmonization,C-index,24-month AUC,Mean predicted risk,Observed risk,IPCW Brier
+Within-MRKR cohort pain z score,0.681,0.709,4.4%,28.0%,0.359
+OAI mean/SD applied to MRKR pain,0.680,0.713,6.9%,28.0%,0.338
+Common raw 0-10 pain scale (algebraically equivalent to OAI standardization),0.680,0.713,6.9%,28.0%,0.338

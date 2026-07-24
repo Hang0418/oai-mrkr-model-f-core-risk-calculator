@@ -1,8 +1,0 @@
-﻿Horizon,Model,Knees,Patients,Events,Event rate,AUC,Brier score,Mean predicted risk,O/E,Calibration intercept,Calibration slope
-24 months,Gradient boosting,"2,363","1,588",855,36.2%,0.745,0.192,36.3%,1.0,0.05,1.12
-24 months,Random forest,"2,363","1,588",855,36.2%,0.743,0.206,47.4%,0.76,-0.55,1.25
-24 months,Penalized logistic regression,"2,363","1,588",855,36.2%,0.732,0.197,36.2%,1.0,0.0,1.01
-24 months,Longitudinal logistic regression,"2,363","1,588",855,36.2%,0.732,0.198,36.2%,1.0,-0.02,0.95
-24 months,Clinical-radiographic logistic regression,"2,363","1,588",855,36.2%,0.726,0.199,36.2%,1.0,-0.02,0.96
-24 months,Pain-KL model,"2,363","1,588",855,36.2%,0.715,0.201,36.2%,1.0,-0.01,0.97
-24 months,Base logistic regression,"2,363","1,588",855,36.2%,0.575,0.227,36.2%,1.0,-0.05,0.91

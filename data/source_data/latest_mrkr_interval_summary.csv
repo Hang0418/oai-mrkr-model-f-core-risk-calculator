@@ -1,0 +1,8 @@
+"statistic","value"
+"Events with reconstructed interval",1140
+"Median interval, days",83
+"IQR lower, days",43
+"IQR upper, days",157
+"Intervals >365 days",96
+"Intervals crossing 24-month horizon",62
+"CPT dates used in hybrid analysis",951

@@ -1,5 +1,0 @@
-﻿Horizon,Method,α (95% CI),β (95% CI)
-24 months,Intercept-only recalibration,1.00 (0.90–1.09),1 fixed
-24 months,Logistic recalibration,0.28 (0.15–0.42),0.51 (0.44–0.57)
-36 months,Intercept-only recalibration,1.67 (1.56–1.77),1 fixed
-36 months,Logistic recalibration,0.95 (0.80–1.11),0.58 (0.51–0.65)

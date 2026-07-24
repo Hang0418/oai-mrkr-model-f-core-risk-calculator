@@ -1,8 +1,0 @@
-﻿Variable,CHECK,OAI,MRKR,Harmonized definition
-Age,baseline_age,age at 24m landmark dataset,age at landmark,years
-Sex,sex_code,female indicator,female indicator,Female vs male
-Pain,"Baseline WOMAC pain, original 0-20 scale for CHECK early model",Landmark pain standardized to 0-10 for transportable modelling,"Landmark pain, 0-10",Pain was converted to 0-10 only for cross-cohort transport; CHECK Figure 2 uses the original 0-20 WOMAC scale.
-KL grade,"KL_t0, KL_t2, KL_t5, KL_t8",KL at baseline/landmark,KL at baseline/landmark,KL grade 0–4
-BMI,baseline BMI,Available in OAI but excluded from the transportable common-variable model,unavailable,used only where available
-Function,baseline WOMAC function,Available in OAI but excluded from the transportable common-variable model,unavailable,not used in common transport
-Arthroplasty,Not used as a primary CHECK endpoint,target-knee TKA/KR,hardware-defined arthroplasty,knee arthroplasty event

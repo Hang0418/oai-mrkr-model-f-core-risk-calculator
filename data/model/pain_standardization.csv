@@ -1,0 +1,3 @@
+"cohort","pain_landmark_mean","pain_landmark_sd","note"
+"OAI training",1.40536404639175,1.73779647077576,"pain_landmark_z = (pain_landmark_0_10 - cohort mean) / cohort SD"
+"MRKR validation",3.37631887456038,3.39454813926584,"pain_landmark_z = (pain_landmark_0_10 - cohort mean) / cohort SD"

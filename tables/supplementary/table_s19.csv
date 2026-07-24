@@ -1,4 +1,0 @@
-﻿threshold,high_risk_knees,high_risk_percent,events_captured,events_captured_percent,sensitivity,specificity,ppv,npv,net_benefit
-0.100,931.00,0.386,217.00,0.778,0.778,0.666,0.233,0.958,0.057
-0.200,442.00,0.183,149.00,0.534,0.534,0.863,0.337,0.934,0.031
-0.300,215.00,0.089,88.00,0.315,0.315,0.941,0.409,0.913,0.014

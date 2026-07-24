@@ -1,0 +1,5 @@
+analysis,brier_24m,interval_type
+Direct transport,0.358846946637281,Point estimate
+Apparent recalibration,0.262276840536300,Point estimate
+Held-out recalibration,0.262503577452956,Empirical interval across 100 patient-level splits
+Null model,0.291077524397417,Empirical interval across 100 patient-level splits

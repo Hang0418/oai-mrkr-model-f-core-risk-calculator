@@ -3,1137 +3,304 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Knee OA Stage-Specific Risk Calculator</title>
+  <title>Model F-core research-use risk calculator</title>
   <style>
     :root {
-      --ink: #17212b;
-      --muted: #5b6773;
-      --line: #d7dee7;
-      --bg: #f6f8fb;
-      --panel: #ffffff;
-      --check: #2f80b7;
-      --check-soft: #e8f3fa;
-      --oai: #6652c7;
-      --oai-soft: #f0edfc;
-      --mrkr: #b66b24;
-      --mrkr-soft: #fff3e4;
-      --good: #2b8a78;
-      --mid: #b97812;
-      --high: #bd5b2b;
-      --shadow: 0 12px 30px rgba(21, 34, 50, 0.08);
+      --navy: #0b2545;
+      --blue: #1f5d99;
+      --teal: #1f7a5c;
+      --line: #d8e2ec;
+      --bg: #f7f9fb;
+      --warn: #fff1f1;
     }
-
-    * { box-sizing: border-box; }
-
     body {
       margin: 0;
-      color: var(--ink);
-      background: var(--bg);
       font-family: Arial, Helvetica, sans-serif;
+      color: #17212b;
+      background: #ffffff;
+    }
+    main {
+      max-width: 960px;
+      margin: 32px auto;
+      padding: 0 20px 40px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 28px;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin: 0 0 24px;
+      color: #52616b;
       line-height: 1.45;
     }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(255, 255, 255, 0.96);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 14px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr);
       gap: 20px;
-    }
-
-    .brand {
-      font-weight: 700;
-      letter-spacing: 0;
-      white-space: nowrap;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      justify-content: flex-end;
-    }
-
-    nav button, .link-button {
-      border: 1px solid transparent;
-      background: transparent;
-      color: var(--muted);
-      padding: 8px 10px;
-      border-radius: 6px;
-      font-size: 14px;
-      cursor: pointer;
-    }
-
-    nav button:hover, nav button.active, .link-button:hover {
-      color: var(--ink);
-      border-color: var(--line);
-      background: #fff;
-    }
-
-    main {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 28px 24px 54px;
-    }
-
-    section { display: none; }
-    section.active { display: block; }
-
-    h1 {
-      margin: 0 0 10px;
-      font-size: 34px;
-      line-height: 1.12;
-    }
-
-    h2 {
-      margin: 0 0 10px;
-      font-size: 24px;
-      line-height: 1.18;
-    }
-
-    h3 {
-      margin: 0 0 8px;
-      font-size: 17px;
-    }
-
-    p { margin: 0 0 12px; color: var(--muted); }
-
-    .hero {
-      padding: 24px 0 10px;
-      display: grid;
-      grid-template-columns: minmax(0, 1.12fr) minmax(340px, 0.88fr);
-      gap: 32px;
-      align-items: center;
-    }
-
-    .hero h1 {
-      font-size: 50px;
-      font-weight: 700;
-      max-width: 820px;
-    }
-
-    .subtitle {
-      font-size: 21px;
-      max-width: 860px;
-      color: #44515f;
-    }
-
-    .cn {
-      color: #3b4856;
-      font-size: 13px;
-      margin-top: 6px;
-    }
-
-    .continuum-card {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 22px;
-      box-shadow: var(--shadow);
-    }
-
-    .continuum {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
-      align-items: center;
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .stage-node {
-      min-height: 76px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 10px;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      background: #fbfcfe;
-      font-size: 13px;
-      font-weight: 700;
-      color: #33404c;
-    }
-
-    .stage-node.early { background: var(--check-soft); color: var(--check); }
-    .stage-node.established { background: var(--oai-soft); color: var(--oai); }
-    .stage-node.surgery { background: #fff3e4; color: var(--mrkr); }
-
-    .arrow {
-      color: #8a96a3;
-      font-weight: 700;
-    }
-
-    .module-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 22px;
-    }
-
-    .module-card, .panel, .result-card, .info-card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-    }
-
-    .module-card {
-      padding: 32px;
-      min-height: 360px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .badge {
-      display: inline-flex;
-      width: fit-content;
-      align-items: center;
-      gap: 6px;
-      border-radius: 999px;
-      padding: 5px 9px;
-      font-size: 12px;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-
-    .check-badge { background: var(--check-soft); color: var(--check); }
-    .oai-badge { background: var(--oai-soft); color: var(--oai); }
-    .mrkr-badge { background: var(--mrkr-soft); color: var(--mrkr); }
-
-    .stage-graphic {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-height: 76px;
-      margin-bottom: 16px;
-    }
-
-    .knee-icon {
-      width: 64px;
-      height: 64px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #fff;
-    }
-
-    .knee-icon svg {
-      width: 44px;
-      height: 44px;
-      stroke-width: 2;
-      fill: none;
-    }
-
-    .knee-icon.check svg { stroke: var(--check); }
-    .knee-icon.oai svg { stroke: var(--oai); }
-    .knee-icon.surgery svg { stroke: var(--mrkr); }
-
-    .stage-caption {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--muted);
-    }
-
-    .card-copy {
-      min-height: 88px;
-      font-size: 17px;
-      line-height: 1.5;
-    }
-
-    .meta-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 20px 0 28px;
-    }
-
-    .meta-tags span {
-      border: 1px solid var(--line);
-      color: #4d5a67;
-      background: #fbfcfe;
-      border-radius: 999px;
-      padding: 6px 9px;
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .primary-btn, .secondary-btn {
-      border: 0;
-      border-radius: 6px;
-      padding: 10px 14px;
-      font-weight: 600;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .primary-btn { color: #fff; background: var(--check); }
-    .primary-btn.oai { background: var(--oai); }
-    .primary-btn.mrkr { background: var(--mrkr); }
-    .secondary-btn {
-      color: var(--ink);
-      background: #fff;
-      border: 1px solid var(--line);
-    }
-
-    .module-card .primary-btn {
-      width: fit-content;
-      min-width: 58%;
-      font-size: 16px;
-    }
-
-    .trust-band {
-      margin-top: 18px;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 16px 18px;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      box-shadow: var(--shadow);
-    }
-
-    .trust-item strong {
-      display: block;
-      color: #283441;
-      margin-bottom: 2px;
-      font-size: 14px;
-    }
-
-    .trust-item span {
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .citation {
-      margin-top: 12px;
-      color: #6a7581;
-      font-size: 13px;
-    }
-
-    .page-title {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      align-items: flex-start;
-      margin-bottom: 16px;
-    }
-
-    .calculator-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.82fr);
-      gap: 18px;
       align-items: start;
     }
-
-    .panel { padding: 18px; }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
+    section {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      background: var(--bg);
     }
-
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      min-width: 0;
-    }
-
     label {
-      color: #2a3440;
-      font-size: 13px;
+      display: block;
       font-weight: 700;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 9px 10px;
-      border: 1px solid #bfc8d2;
-      border-radius: 6px;
-      background: #fff;
-      color: var(--ink);
+      color: var(--navy);
+      margin: 12px 0 6px;
       font-size: 14px;
     }
-
-    input[type="range"] {
-      padding: 0;
-      accent-color: var(--check);
+    input, select {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid #b8c6d6;
+      border-radius: 6px;
+      padding: 10px 11px;
+      font-size: 15px;
+      background: white;
     }
-
-    .hint {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .subhead {
-      border-top: 1px solid var(--line);
-      padding-top: 14px;
-      margin-top: 16px;
+    .result {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
       margin-bottom: 12px;
     }
-
-    .warning {
-      display: none;
-      background: #fff7d6;
-      border-left: 4px solid #e0aa2f;
-      padding: 10px 12px;
-      border-radius: 4px;
-      color: #5f4210;
-      font-size: 13px;
-      margin: 12px 0 0;
+    .result strong {
+      display: block;
+      color: var(--navy);
+      font-size: 14px;
+      margin-bottom: 8px;
     }
-
-    .warning.show { display: block; }
-
-    .result-card {
-      padding: 18px;
-      position: sticky;
-      top: 82px;
-    }
-
-    .risk-number {
-      font-size: 46px;
-      line-height: 1;
+    .risk {
+      font-size: 28px;
       font-weight: 800;
-      margin: 12px 0 8px;
+      color: var(--blue);
     }
-
-    .risk-label {
+    .risk.recal { color: var(--teal); }
+    .meta {
+      color: #52616b;
+      font-size: 13px;
+      line-height: 1.45;
+      margin-top: 8px;
+    }
+    .notice {
+      background: var(--warn);
+      border-color: #f0b4b4;
+      color: #5f1818;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .badge {
       display: inline-block;
-      padding: 6px 9px;
+      border: 1px solid var(--line);
       border-radius: 999px;
-      font-size: 13px;
-      font-weight: 700;
-      margin: 8px 0 12px;
+      padding: 5px 9px;
+      margin: 0 6px 8px 0;
+      font-size: 12px;
+      color: #52616b;
+      background: white;
     }
-
-    .risk-low { background: #e5f4f0; color: var(--good); }
-    .risk-mid { background: #fff2d8; color: var(--mid); }
-    .risk-high { background: #fae8df; color: var(--high); }
-
-    .metric-list {
-      margin: 10px 0 0;
-      padding-left: 18px;
-      color: #33404c;
+    a {
+      color: var(--blue);
+      text-underline-offset: 2px;
     }
-
-    .metric-list li { margin: 6px 0; }
-
-    .threshold-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 10px;
+    .badge a {
+      color: inherit;
+      text-decoration: none;
     }
-
-    .threshold-card {
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      padding: 10px;
-      background: #fbfcfe;
-      font-size: 13px;
+    .availability {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      color: #52616b;
+      font-size: 12px;
+      line-height: 1.55;
     }
-
-    .threshold-card strong { display: block; margin-bottom: 4px; }
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
+    .availability strong {
+      color: var(--navy);
     }
-
-    .info-card { padding: 16px; }
-
-    .equation {
-      background: #f1f4f7;
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      padding: 10px;
-      font-family: Menlo, Consolas, monospace;
-      font-size: 13px;
-      color: #26313d;
-      overflow-x: auto;
+    .formula {
+      margin-top: 20px;
+      font-size: 12px;
+      line-height: 1.45;
+      color: #52616b;
     }
-
-    .summary {
-      margin-top: 14px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    @media print {
-      header, .summary, .page-title .secondary-btn, .primary-btn, .link-button { display: none !important; }
-      body { background: #fff; }
-      main { padding: 0; }
-      section { display: block; page-break-after: always; }
-      section:not(.active) { display: none; }
-      .result-card { position: static; box-shadow: none; }
-      .panel, .result-card, .module-card, .info-card { box-shadow: none; }
-    }
-
-    @media (max-width: 860px) {
-      h1 { font-size: 27px; }
-      .hero h1 { font-size: 34px; }
-      .nav { align-items: flex-start; flex-direction: column; }
-      nav { justify-content: flex-start; }
-      .module-grid, .calculator-layout, .info-grid, .hero, .trust-band { grid-template-columns: 1fr; }
-      .form-grid { grid-template-columns: 1fr; }
-      .result-card { position: static; }
-      .threshold-grid { grid-template-columns: 1fr; }
-      .continuum { grid-template-columns: 1fr; }
-      .arrow { text-align: center; }
+    @media (max-width: 760px) {
+      .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="nav">
-      <div class="brand">Knee OA Risk Calculator</div>
-      <nav>
-        <button class="active" data-page="home">Home</button>
-        <button data-page="early">Early OA Risk</button>
-        <button data-page="arthroplasty">Arthroplasty Risk</button>
-        <button data-page="info">Model Information</button>
-        <button data-page="about">About</button>
-      </nav>
-    </div>
-  </header>
-
   <main>
-    <section id="home" class="active">
-      <div class="hero">
-        <div>
-          <h1>Knee OA Stage-Specific Risk Calculator</h1>
-          <p class="subtitle">Estimate early radiographic progression and future knee arthroplasty risk using stage-matched clinical prediction models.</p>
-          <p>Select the module that matches the patient&apos;s current radiographic stage.</p>
-          <p class="cn">中文名称：膝骨关节炎阶段特异性风险计算器</p>
+    <h1>Model F-core research-use risk calculator</h1>
+    <p class="subtitle">OAI-derived common-variable transport model with selectable local recalibration. This tool is for manuscript reproducibility, transport validation, and site-specific recalibration workflows.</p>
+    <div>
+      <span class="badge">Model version: F-core v1.0</span>
+      <span class="badge">Formula basis: OAI Cox landmark model</span>
+      <span class="badge"><a href="https://github.com/Hang0418/oai-mrkr-model-f-core-risk-calculator">GitHub repository</a></span>
+    </div>
+
+    <div class="grid">
+      <section>
+        <label for="age">Age, years</label>
+        <input id="age" type="number" min="30" max="100" step="1" value="64">
+
+        <label for="sex">Sex</label>
+        <select id="sex">
+          <option value="0">Male</option>
+          <option value="1" selected>Female</option>
+        </select>
+
+        <label for="side">Knee side</label>
+        <select id="side">
+          <option value="0">Left</option>
+          <option value="1" selected>Right</option>
+        </select>
+
+        <label for="pain">Landmark pain score, 0-10</label>
+        <input id="pain" type="number" min="0" max="10" step="0.1" value="6">
+
+        <label for="kl0">Baseline Kellgren-Lawrence grade</label>
+        <input id="kl0" type="number" min="0" max="4" step="1" value="3">
+
+        <label for="kl24">24-month Kellgren-Lawrence grade</label>
+        <input id="kl24" type="number" min="0" max="4" step="1" value="4">
+
+        <label for="mode">Local recalibration mode</label>
+        <select id="mode">
+          <option value="mrkr" selected>MRKR slope + baseline recalibration</option>
+          <option value="oai">Original OAI-derived baseline</option>
+          <option value="custom">Custom local slope + baseline</option>
+        </select>
+
+        <label for="customSlope">Custom calibration slope</label>
+        <input id="customSlope" type="number" min="0.1" max="2" step="0.01" value="0.68">
+
+        <label for="customH0">Custom 24-month baseline cumulative hazard</label>
+        <input id="customH0" type="number" min="0.0001" max="1" step="0.0001" value="0.0706">
+
+        <label for="customPainMean">Custom local pain mean</label>
+        <input id="customPainMean" type="number" min="0" max="10" step="0.001" value="3.376">
+
+        <label for="customPainSd">Custom local pain SD</label>
+        <input id="customPainSd" type="number" min="0.001" max="10" step="0.001" value="3.395">
+      </section>
+
+      <section>
+        <div class="result">
+          <strong>Original OAI-derived 24-month risk</strong>
+          <div id="oaiRisk" class="risk">-</div>
+          <div class="meta">Uses OAI pain standardization and OAI baseline cumulative hazard at 24 months.</div>
         </div>
-        <aside class="continuum-card">
-          <span class="badge check-badge">Disease-stage framework</span>
-          <h3>Radiographic progression to arthroplasty risk</h3>
-          <div class="continuum">
-            <div class="stage-node early">KL 0-1<br>symptomatic knee</div>
-            <div class="arrow">→</div>
-            <div class="stage-node early">KL >=2<br>definite OA</div>
-            <div class="arrow">→</div>
-            <div class="stage-node established">KL 3/4<br>advanced OA</div>
-            <div class="arrow">→</div>
-            <div class="stage-node surgery">TKA/KR<br>endpoint</div>
-          </div>
-        </aside>
-      </div>
-
-      <div class="module-grid">
-        <article class="module-card">
-          <div>
-            <div class="stage-graphic">
-              <div class="knee-icon check" aria-hidden="true">
-                <svg viewBox="0 0 48 48"><path d="M18 5c7 4 9 10 8 17M30 5c-6 5-8 11-7 18M17 24c5-2 11-2 16 0M18 43c7-4 9-10 8-17M30 43c-6-5-8-11-7-18"/></svg>
-              </div>
-              <div class="arrow">→</div>
-              <div class="knee-icon check" aria-hidden="true">
-                <svg viewBox="0 0 48 48"><path d="M18 5c7 4 9 10 8 17M30 5c-6 5-8 11-7 18M15 24c6-3 13-3 19 0M17 43c8-4 10-10 9-17M32 42c-7-5-9-10-8-17"/><path d="M19 22l4 4 5-4"/></svg>
-              </div>
-              <span class="stage-caption">KL 0-1 → KL >=2</span>
-            </div>
-            <div class="badge check-badge">EARLY OA</div>
-            <h2>24-Month Radiographic Progression</h2>
-            <p class="card-copy">Estimate the probability of progression from KL grade 0-1 to definite radiographic OA (KL >=2).</p>
-            <div class="meta-tags">
-              <span>CHECK model</span>
-              <span>Symptomatic knees</span>
-              <span>Baseline KL 0-1</span>
-            </div>
-          </div>
-          <button class="primary-btn" data-page="early">Calculate progression risk →</button>
-        </article>
-
-        <article class="module-card">
-          <div>
-            <div class="stage-graphic">
-              <div class="knee-icon oai" aria-hidden="true">
-                <svg viewBox="0 0 48 48"><path d="M16 5c8 6 10 12 8 19M33 6c-8 6-10 12-8 19M15 23c7-4 15-4 22 0M16 43c8-5 10-11 8-18M34 42c-8-5-10-11-8-18"/><path d="M18 19l5 5 7-6"/></svg>
-              </div>
-              <div class="arrow">→</div>
-              <div class="knee-icon surgery" aria-hidden="true">
-                <svg viewBox="0 0 48 48"><path d="M17 6v14M31 6v14M14 22h20M18 28v14M30 28v14M15 28h18"/><path d="M21 20l-3 8M27 20l3 8"/></svg>
-              </div>
-              <span class="stage-caption">KL 0-4 → TKA/KR</span>
-            </div>
-            <div class="badge oai-badge">ESTABLISHED OA</div>
-            <h2>60-Month Knee Arthroplasty Risk</h2>
-            <p class="card-copy">Estimate the probability of target-knee arthroplasty during the 60 months after landmark assessment.</p>
-            <div class="meta-tags">
-              <span>OAI model</span>
-              <span>24-month landmark</span>
-              <span>KL 0-4</span>
-            </div>
-          </div>
-          <button class="primary-btn oai" data-page="arthroplasty">Calculate arthroplasty risk →</button>
-        </article>
-      </div>
-
-      <div class="trust-band">
-        <div class="trust-item">
-          <strong>Cohort-derived</strong>
-          <span>Developed using CHECK and OAI cohorts.</span>
+        <div class="result">
+          <strong>Selected-mode 24-month risk</strong>
+          <div id="selectedRisk" class="risk recal">-</div>
+          <div id="stratum" class="meta">Risk stratum: -</div>
+          <div id="klwText" class="meta">KL worsening: -</div>
+          <div class="meta">In MRKR mode, this is the probability of first side-specific hardware-positive postoperative imaging, not an exact operation-date risk.</div>
         </div>
-        <div class="trust-item">
-          <strong>Internally validated</strong>
-          <span>Patient-grouped out-of-fold validation.</span>
+        <div class="result">
+          <strong>Clinical interpretation</strong>
+          <div id="interpretation" class="meta">-</div>
         </div>
-        <div class="trust-item">
-          <strong>Recalibration assessed</strong>
-          <span>Transportability evaluated in MRKR.</span>
+        <div class="result notice">
+          Strict research-use statement: this calculator is not validated as a clinical decision instrument and must not be used to determine surgery, treatment eligibility, referral urgency, or individual patient management without prospective validation, local recalibration, and governance approval.
         </div>
-      </div>
-      <p class="citation">Based on: He H, et al. Stage-Specific Prediction of Knee Osteoarthritis Progression and Arthroplasty Risk with Real-World Recalibration. Model version 2026-07-22.</p>
-    </section>
+      </section>
+    </div>
 
-    <section id="early">
-      <div class="page-title">
-        <div>
-          <h1>24-Month Early Radiographic Progression Risk</h1>
-          <p>This model estimates the probability that a symptomatic knee with baseline KL grade 0 or 1 will progress to KL grade >=2 within 24 months.</p>
-        </div>
-        <button class="secondary-btn" data-page="home">Back to home</button>
-      </div>
-
-      <div class="calculator-layout">
-        <div class="panel">
-          <h2>Patient characteristics</h2>
-          <div class="form-grid">
-            <div class="field">
-              <label for="check_age">Age, years</label>
-              <input id="check_age" type="number" min="18" max="100" step="1" value="56">
-              <span class="hint">Typical development-cohort range: 30-85 years.</span>
-            </div>
-            <div class="field">
-              <label for="check_sex">Sex</label>
-              <select id="check_sex">
-                <option value="1">Female</option>
-                <option value="0">Male</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="check_bmi">Body mass index, kg/m2</label>
-              <input id="check_bmi" type="number" min="10" max="80" step="0.1" value="26.1">
-              <span class="hint">Typical development-cohort range: 15-60 kg/m2.</span>
-            </div>
-            <div class="field">
-              <label for="check_side">Knee side</label>
-              <select id="check_side">
-                <option value="0">Left</option>
-                <option value="1">Right</option>
-              </select>
-            </div>
-          </div>
-
-          <h2 class="subhead">Symptoms and radiographic status</h2>
-          <div class="form-grid">
-            <div class="field">
-              <label for="check_kl">Baseline KL grade</label>
-              <select id="check_kl">
-                <option value="0">KL0</option>
-                <option value="1">KL1</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="check_pain">WOMAC pain score, 0-20</label>
-              <input id="check_pain" type="range" min="0" max="20" step="0.1" value="4.9">
-              <input id="check_pain_num" type="number" min="0" max="20" step="0.1" value="4.9">
-              <span class="hint">Use the original CHECK WOMAC pain scale from 0 to 20.</span>
-            </div>
-            <div class="field">
-              <label for="check_function">WOMAC function score, 0-68</label>
-              <input id="check_function" type="number" min="0" max="68" step="1" value="15.5">
-            </div>
-            <div class="field">
-              <label for="check_pain_flag">Baseline knee pain</label>
-              <select id="check_pain_flag">
-                <option value="1">Yes</option>
-                <option value="0">No</option>
-              </select>
-            </div>
-          </div>
-          <div id="check_warning" class="warning"></div>
-          <div class="summary">
-            <button class="primary-btn" onclick="calculateCheck()">Calculate risk</button>
-            <button class="secondary-btn" onclick="resetCheck()">Start new calculation</button>
-          </div>
-        </div>
-
-        <aside class="result-card" id="check_result_card">
-          <span class="badge check-badge">CHECK early OA model</span>
-          <h2>Estimated 24-month progression risk</h2>
-          <div class="risk-number" id="check_risk">--</div>
-          <p>Probability of incident KL grade >=2 within 24 months.</p>
-          <div id="check_group" class="risk-label risk-mid">Awaiting calculation</div>
-          <h3>Main contributors</h3>
-          <ul class="metric-list" id="check_contributors">
-            <li>Enter patient and knee information, then calculate.</li>
-          </ul>
-          <h3>Clinical interpretation</h3>
-          <p id="check_interpretation">This estimate may support risk communication, preventive management, and selection of patients for structured follow-up.</p>
-          <button class="secondary-btn" onclick="downloadSummary('check')">Download clinical summary</button>
-        </aside>
-      </div>
-    </section>
-
-    <section id="arthroplasty">
-      <div class="page-title">
-        <div>
-          <h1>60-Month Knee Arthroplasty Risk</h1>
-          <p>This model estimates the probability of target-knee TKA/KR during the 60 months following the 24-month landmark assessment.</p>
-        </div>
-        <button class="secondary-btn" data-page="home">Back to home</button>
-      </div>
-
-      <div class="calculator-layout">
-        <div class="panel">
-          <h2>Patient characteristics</h2>
-          <div class="form-grid">
-            <div class="field">
-              <label for="oai_age">Age at landmark, years</label>
-              <input id="oai_age" type="number" min="18" max="100" step="1" value="63">
-            </div>
-            <div class="field">
-              <label for="oai_sex">Sex</label>
-              <select id="oai_sex">
-                <option value="1">Female</option>
-                <option value="0">Male</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="oai_side">Knee side</label>
-              <select id="oai_side">
-                <option value="0">Left</option>
-                <option value="1">Right</option>
-              </select>
-            </div>
-          </div>
-
-          <h2 class="subhead">Current disease status at landmark</h2>
-          <div class="form-grid">
-            <div class="field">
-              <label for="oai_pain">Current pain score, 0-10</label>
-              <input id="oai_pain" type="number" min="0" max="10" step="0.1" value="3.8">
-            </div>
-            <div class="field">
-              <label for="oai_kl">Current KL grade</label>
-              <select id="oai_kl">
-                <option value="0">KL0</option>
-                <option value="1">KL1</option>
-                <option value="2" selected>KL2</option>
-                <option value="3">KL3</option>
-                <option value="4">KL4</option>
-              </select>
-            </div>
-          </div>
-
-          <h2 class="subhead">Change during the previous 24 months</h2>
-          <div class="form-grid">
-            <div class="field">
-              <label for="oai_pain_prev">Pain score 24 months earlier, 0-10</label>
-              <input id="oai_pain_prev" type="number" min="0" max="10" step="0.1" value="2.5">
-            </div>
-            <div class="field">
-              <label for="oai_kl_prev">KL grade 24 months earlier</label>
-              <select id="oai_kl_prev">
-                <option value="0">KL0</option>
-                <option value="1">KL1</option>
-                <option value="2" selected>KL2</option>
-                <option value="3">KL3</option>
-                <option value="4">KL4</option>
-              </select>
-            </div>
-          </div>
-          <p class="hint" id="oai_delta_hint">Positive values indicate worsening.</p>
-          <div id="oai_warning" class="warning"></div>
-          <div class="summary">
-            <button class="primary-btn oai" onclick="calculateOai()">Calculate risk</button>
-            <button class="secondary-btn" onclick="resetOai()">Start new calculation</button>
-          </div>
-        </div>
-
-        <aside class="result-card" id="oai_result_card">
-          <span class="badge oai-badge">OAI arthroplasty model</span>
-          <h2>Estimated 60-month TKA/KR risk</h2>
-          <div class="risk-number" id="oai_risk">--</div>
-          <p>Estimated probability of target-knee arthroplasty during the 60 months after landmark assessment.</p>
-          <div id="oai_group" class="risk-label risk-mid">Awaiting calculation</div>
-          <h3>Main contributors</h3>
-          <ul class="metric-list" id="oai_contributors">
-            <li>Enter landmark and previous 24-month information, then calculate.</li>
-          </ul>
-          <h3>Research thresholds</h3>
-          <div class="threshold-grid" id="thresholds"></div>
-          <button class="secondary-btn" onclick="downloadSummary('oai')">Download clinical summary</button>
-        </aside>
-      </div>
-    </section>
-
-    <section id="info">
-      <div class="page-title">
-        <div>
-          <h1>Model Information</h1>
-          <p>Development cohorts, intended populations, validation statistics, and target-cohort recalibration.</p>
-        </div>
-        <button class="secondary-btn" data-page="home">Back to home</button>
-      </div>
-
-      <div class="info-grid">
-        <article class="info-card">
-          <span class="badge check-badge">Early model</span>
-          <h2>CHECK</h2>
-          <p><strong>Population:</strong> symptomatic baseline KL0/1 knees.</p>
-          <p><strong>Outcome:</strong> 24-month incident KL >=2.</p>
-          <p><strong>Model:</strong> penalized logistic regression.</p>
-          <p><strong>AUC:</strong> 0.786. <strong>Brier:</strong> 0.089.</p>
-        </article>
-        <article class="info-card">
-          <span class="badge oai-badge">Arthroplasty model</span>
-          <h2>OAI</h2>
-          <p><strong>Population:</strong> 24-month landmark knees, KL0-4.</p>
-          <p><strong>Outcome:</strong> subsequent 60-month target-knee TKA/KR.</p>
-          <p><strong>Model:</strong> penalized logistic regression.</p>
-          <p><strong>AUC:</strong> 0.789. <strong>Brier:</strong> 0.089.</p>
-        </article>
-        <article class="info-card">
-          <span class="badge mrkr-badge">Transport evidence</span>
-          <h2>MRKR</h2>
-          <p><strong>Role:</strong> real-world transport and recalibration dataset.</p>
-          <p><strong>AUC:</strong> 0.700 at 24 months; 0.723 at 36 months.</p>
-          <p><strong>Finding:</strong> ranking was retained, but absolute risk required target-horizon recalibration.</p>
-        </article>
-      </div>
-
-      <div class="panel" style="margin-top:18px">
-        <span class="badge mrkr-badge">Research tools</span>
-        <h2>Target-Cohort Recalibration</h2>
-        <p>Apply horizon-specific recalibration to the fixed OAI prognostic index for a target population with different event frequency or follow-up horizon.</p>
-        <div class="equation">logit(p_h) = alpha_h + beta_h LP_OAI</div>
-        <div class="form-grid" style="margin-top:14px">
-          <div class="field">
-            <label for="lp_oai">Original OAI linear predictor</label>
-            <input id="lp_oai" type="number" step="0.01" value="-1.44">
-          </div>
-          <div class="field">
-            <label for="recal_horizon">Target horizon</label>
-            <select id="recal_horizon">
-              <option value="24">24 months</option>
-              <option value="36">36 months</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="recal_method">Recalibration setting</label>
-            <select id="recal_method">
-              <option value="original">Original OAI index</option>
-              <option value="intercept">MRKR intercept-only</option>
-              <option value="logistic" selected>MRKR logistic recalibration</option>
-              <option value="custom">Custom local alpha and beta</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="custom_alpha">Custom alpha</label>
-            <input id="custom_alpha" type="number" step="0.01" value="0.28">
-          </div>
-          <div class="field">
-            <label for="custom_beta">Custom beta</label>
-            <input id="custom_beta" type="number" step="0.01" value="0.51">
-          </div>
-        </div>
-        <div class="summary">
-          <button class="primary-btn mrkr" onclick="calculateRecalibration()">Calculate recalibrated estimate</button>
-        </div>
-        <div id="recal_result" class="result-card" style="position:static;margin-top:14px;box-shadow:none"></div>
-      </div>
-    </section>
-
-    <section id="about">
-      <h1>About</h1>
-      <div class="panel">
-        <p>This calculator is a research-use implementation of stage-specific knee OA prediction models. Outputs are not validated treatment thresholds and should not be used to determine surgical eligibility.</p>
-        <p>The early module estimates 24-month incident definite radiographic OA in symptomatic CHECK knees with baseline KL0/1. The arthroplasty module estimates 60-month target-knee TKA/KR risk after a 24-month OAI landmark. MRKR evidence is presented as transport and recalibration information for researchers.</p>
-        <p><strong>Version date:</strong> 2026-07-22.</p>
-      </div>
-    </section>
+    <p class="formula">
+      LP = 0.001641*age - 0.135838*female + 0.004416*right_knee + 0.290862*pain_z + 0.778458*baseline_KL + 1.019422*I(24-month KL - baseline KL >= 1).
+      Original OAI-derived risk = 1 - exp[-H0(24)*exp(LP)], H0(24)=0.003919.
+      MRKR recalibrated risk = 1 - exp[-0.070564*exp(0.681400*LP)]. The primary MRKR implementation uses target-cohort pain standardization. Custom recalibration uses local pain mean/SD, slope, and baseline cumulative hazard.
+    </p>
+    <div class="availability">
+      <strong>Data and code availability.</strong>
+      OAI data require authorized access through the <a href="https://nda.nih.gov/oai/">NIMH Data Archive</a>.
+      MRKR is documented by <a href="https://docs.ngsci.org/datasets/mrkr-emory-xray/">Nightingale Open Science</a> and listed in the <a href="https://registry.opendata.aws/mrkr/">Registry of Open Data on AWS</a>; the hosted resource is controlled access.
+      CHECK data are not redistributed and remain subject to study-specific approval.
+      Calculator source, model parameters, aggregate results, and reproducibility materials are available in the <a href="https://github.com/Hang0418/oai-mrkr-model-f-core-risk-calculator">public GitHub repository</a>.
+    </div>
   </main>
 
   <script>
-    const models = {
-      check: {
-        intercept: -2.3787,
-        terms: [
-          {name: "Age", coef: 0.1704, center: 55.7559, scale: 5.1841},
-          {name: "Female sex", coef: 0.0731, center: 0.786, scale: 0.4101},
-          {name: "Right knee", coef: 0.087, center: 0.5, scale: 0.5},
-          {name: "Pain score", coef: 0.1517, center: 4.9287, scale: 3.4278},
-          {name: "Baseline KL1", coef: 0.7618, center: 0.3129, scale: 0.4637},
-          {name: "BMI", coef: 0.2367, center: 26.0951, scale: 3.9747},
-          {name: "WOMAC function", coef: 0.1077, center: 15.4956, scale: 11.5347},
-          {name: "Baseline knee pain flag", coef: 0.1395, center: 0.6327, scale: 0.4821}
-        ]
-      },
-      oai: {
-        intercept: -2.4346,
-        terms: [
-          {name: "Age", coef: 0.2137, center: 62.5371, scale: 9.005},
-          {name: "Female sex", coef: 0.0122, center: 0.6095, scale: 0.4879},
-          {name: "Right knee", coef: -0.0475, center: 0.4965, scale: 0.5},
-          {name: "Pain score", coef: 0.4264, center: 1.4829, scale: 1.7719},
-          {name: "KL grade", coef: 0.7718, center: 2.3267, scale: 1.043},
-          {name: "Pain change", coef: 0.0164, center: -0.0557, scale: 1.5601},
-          {name: "KL change", coef: 0.1428, center: 0.1188, scale: 0.3599}
-        ]
-      }
+    const beta = {
+      age: 0.00164077477256476,
+      female: -0.13583783214975,
+      right: 0.00441591384434222,
+      pain: 0.290861790566034,
+      kl: 0.778457697796415,
+      klw: 1.01942211707925
     };
+    const oaiPainMean = 1.40536404639175;
+    const oaiPainSd = 1.73779647077576;
+    const mrkrPainMean = 3.37631887456038;
+    const mrkrPainSd = 3.39454813926584;
+    const h0Oai24 = 0.00391871810230842;
+    const h0Mrkr24 = 0.0705638786413772;
+    const recalSlope = 0.681400186474898;
 
-    const tertiles = [
-      {label: "Lowest predicted-risk tertile", min: 0.005, max: 0.052, observed: "2.6%", klass: "risk-low"},
-      {label: "Middle predicted-risk tertile", min: 0.052, max: 0.117, observed: "7.0%", klass: "risk-mid"},
-      {label: "Highest predicted-risk tertile", min: 0.117, max: 0.692, observed: "25.1%", klass: "risk-high"}
-    ];
-
-    const thresholds = [
-      {threshold: 0.10, high: "38.6%", captured: "77.8%", ppv: "23.3%", npv: "95.8%"},
-      {threshold: 0.20, high: "18.3%", captured: "53.4%", ppv: "33.7%", npv: "93.4%"},
-      {threshold: 0.30, high: "8.9%", captured: "31.5%", ppv: "40.9%", npv: "91.3%"}
-    ];
-
-    function logistic(x) {
-      return 1 / (1 + Math.exp(-x));
+    function pct(x) {
+      return (100 * x).toFixed(1) + "%";
     }
-
-    function z(value, center, scale) {
-      return (value - center) / scale;
+    function riskStratum(x) {
+      if (x < 0.10) return "<10%";
+      if (x < 0.25) return "10-<25%";
+      if (x < 0.50) return "25-<50%";
+      return ">=50%";
     }
-
-    function showPage(id) {
-      document.querySelectorAll("section").forEach(section => section.classList.remove("active"));
-      document.getElementById(id).classList.add("active");
-      document.querySelectorAll("nav button").forEach(button => {
-        button.classList.toggle("active", button.dataset.page === id);
-      });
-      window.scrollTo({top: 0, behavior: "smooth"});
+    function interpretation(x) {
+      if (x < 0.10) return "Low recalibrated near-term risk stratum. Interpret only within a research validation workflow.";
+      if (x < 0.25) return "Intermediate recalibrated near-term risk stratum. Consider as a research enrichment signal, not a treatment recommendation.";
+      if (x < 0.50) return "Elevated recalibrated near-term risk stratum. Use for validation, calibration assessment, or trial-enrichment context only.";
+      return "Very high recalibrated near-term risk stratum. This does not imply surgical indication; clinical decisions require independent evaluation.";
     }
-
-    document.querySelectorAll("[data-page]").forEach(button => {
-      button.addEventListener("click", () => showPage(button.dataset.page));
-    });
-
-    const initialPage = window.location.hash.replace("#", "");
-    if (["home", "early", "arthroplasty", "info", "about"].includes(initialPage)) {
-      showPage(initialPage);
+    function lp(painMean, painSd) {
+      const age = Number(document.getElementById("age").value || 0);
+      const female = Number(document.getElementById("sex").value);
+      const right = Number(document.getElementById("side").value);
+      const pain = Number(document.getElementById("pain").value || 0);
+      const kl = Number(document.getElementById("kl0").value || 0);
+      const kl24 = Number(document.getElementById("kl24").value || 0);
+      const klw = (kl24 - kl) >= 1 ? 1 : 0;
+      const painZ = (pain - painMean) / painSd;
+      return beta.age * age + beta.female * female + beta.right * right +
+        beta.pain * painZ + beta.kl * kl + beta.klw * klw;
     }
-
-    const checkPain = document.getElementById("check_pain");
-    const checkPainNum = document.getElementById("check_pain_num");
-    checkPain.addEventListener("input", () => { checkPainNum.value = checkPain.value; });
-    checkPainNum.addEventListener("input", () => { checkPain.value = checkPainNum.value; });
-
-    function getNumber(id) {
-      const value = Number(document.getElementById(id).value);
-      if (Number.isNaN(value)) throw new Error(id + " is required");
-      return value;
-    }
-
-    function showWarning(id, messages) {
-      const box = document.getElementById(id);
-      if (!messages.length) {
-        box.classList.remove("show");
-        box.innerHTML = "";
+    function update() {
+      const lpOai = lp(oaiPainMean, oaiPainSd);
+      const lpMrkr = lp(mrkrPainMean, mrkrPainSd);
+      const oaiRisk = 1 - Math.exp(-h0Oai24 * Math.exp(lpOai));
+      const mode = document.getElementById("mode").value;
+      let selectedRisk;
+      if (mode === "oai") {
+        selectedRisk = oaiRisk;
+      } else if (mode === "custom") {
+        const slope = Number(document.getElementById("customSlope").value || recalSlope);
+        const h0 = Number(document.getElementById("customH0").value || h0Mrkr24);
+        const painMean = Number(document.getElementById("customPainMean").value || mrkrPainMean);
+        const painSd = Number(document.getElementById("customPainSd").value || mrkrPainSd);
+        const lpCustom = lp(painMean, Math.max(painSd, 0.001));
+        selectedRisk = 1 - Math.exp(-h0 * Math.exp(slope * lpCustom));
       } else {
-        box.classList.add("show");
-        box.innerHTML = messages.join("<br>");
+        selectedRisk = 1 - Math.exp(-h0Mrkr24 * Math.exp(recalSlope * lpMrkr));
       }
+      const kl0 = Number(document.getElementById("kl0").value || 0);
+      const kl24 = Number(document.getElementById("kl24").value || 0);
+      const klw = (kl24 - kl0) >= 1 ? "yes" : "no";
+      document.getElementById("oaiRisk").textContent = pct(oaiRisk);
+      document.getElementById("selectedRisk").textContent = pct(selectedRisk);
+      document.getElementById("stratum").textContent = "Risk stratum: " + riskStratum(selectedRisk);
+      document.getElementById("klwText").textContent = "KL worsening automatically derived: " + klw + " (" + (kl24 - kl0).toFixed(0) + " grade change)";
+      document.getElementById("interpretation").textContent = interpretation(selectedRisk);
     }
-
-    function contributionList(items) {
-      return items
-        .filter(item => item.show)
-        .sort((a, b) => b.weight - a.weight)
-        .slice(0, 5)
-        .map(item => "<li>" + item.text + "</li>")
-        .join("");
-    }
-
-    function calculateCheck() {
-      const age = getNumber("check_age");
-      const female = getNumber("check_sex");
-      const bmi = getNumber("check_bmi");
-      const right = getNumber("check_side");
-      const kl1 = getNumber("check_kl");
-      const pain = getNumber("check_pain_num");
-      const womacFunction = getNumber("check_function");
-      const painFlag = getNumber("check_pain_flag");
-      const warnings = [];
-      if (age < 30 || age > 85) warnings.push("Age is outside the typical range of the CHECK development cohort. Interpret the result cautiously.");
-      if (bmi < 15 || bmi > 60) warnings.push("BMI is outside the typical range of the development cohort. Interpret the result cautiously.");
-      if (pain < 0 || pain > 20) warnings.push("WOMAC pain must be interpreted on the original CHECK 0-20 scale.");
-      if (womacFunction < 0 || womacFunction > 68) warnings.push("WOMAC function should be entered on the 0-68 scale.");
-      showWarning("check_warning", warnings);
-
-      const lp = models.check.intercept
-        + 0.1704 * z(age, 55.7559, 5.1841)
-        + 0.0731 * z(female, 0.786, 0.4101)
-        + 0.087 * z(right, 0.5, 0.5)
-        + 0.1517 * z(pain, 4.9287, 3.4278)
-        + 0.7618 * z(kl1, 0.3129, 0.4637)
-        + 0.2367 * z(bmi, 26.0951, 3.9747)
-        + 0.1077 * z(womacFunction, 15.4956, 11.5347)
-        + 0.1395 * z(painFlag, 0.6327, 0.4821);
-      const risk = logistic(lp);
-      document.getElementById("check_risk").textContent = (risk * 100).toFixed(1) + "%";
-
-      const group = document.getElementById("check_group");
-      group.className = "risk-label " + (risk < 0.08 ? "risk-low" : risk < 0.20 ? "risk-mid" : "risk-high");
-      group.textContent = risk < 0.08 ? "Lower estimated risk" : risk < 0.20 ? "Intermediate estimated risk" : "Higher estimated risk";
-
-      const contributors = [
-        {show: kl1 === 1, weight: 5, text: "Baseline KL1, compared with KL0"},
-        {show: pain > 5, weight: 4, text: "Higher WOMAC pain on the original 0-20 CHECK scale"},
-        {show: womacFunction > 18, weight: 3, text: "Greater WOMAC functional limitation"},
-        {show: bmi > 28, weight: 2, text: "Higher body mass index"},
-        {show: age > 60, weight: 1, text: "Older age within the development-cohort context"},
-        {show: painFlag === 1, weight: 1, text: "Presence of baseline knee pain"}
-      ];
-      document.getElementById("check_contributors").innerHTML =
-        contributionList(contributors) || "<li>No single high-burden input dominated this estimate.</li>";
-      document.getElementById("check_interpretation").textContent =
-        "This estimate may help identify symptomatic knees that are more likely to develop definite radiographic OA over the next 24 months. It may support risk communication, preventive management, and selection of patients for structured follow-up.";
-    }
-
-    function calculateOai() {
-      const age = getNumber("oai_age");
-      const female = getNumber("oai_sex");
-      const right = getNumber("oai_side");
-      const pain = getNumber("oai_pain");
-      const kl = getNumber("oai_kl");
-      const painPrev = getNumber("oai_pain_prev");
-      const klPrev = getNumber("oai_kl_prev");
-      const painChange = pain - painPrev;
-      const klChange = kl - klPrev;
-      document.getElementById("oai_delta_hint").textContent =
-        "Computed change: pain " + painChange.toFixed(1) + ", KL " + klChange.toFixed(0) + ". Positive values indicate worsening.";
-      const warnings = [];
-      if (pain < 0 || pain > 10 || painPrev < 0 || painPrev > 10) warnings.push("Pain values should use the harmonized 0-10 scale.");
-      if (klChange < -2) warnings.push("Please verify the radiographic grades. Large apparent decreases may reflect reading variation or inconsistent time points.");
-      if (klPrev === 4 && kl <= 2) warnings.push("Please verify the radiographic grades. KL4 followed by KL2 or lower is unusual.");
-      showWarning("oai_warning", warnings);
-
-      const lp = models.oai.intercept
-        + 0.2137 * z(age, 62.5371, 9.005)
-        + 0.0122 * z(female, 0.6095, 0.4879)
-        - 0.0475 * z(right, 0.4965, 0.5)
-        + 0.4264 * z(pain, 1.4829, 1.7719)
-        + 0.7718 * z(kl, 2.3267, 1.043)
-        + 0.0164 * z(painChange, -0.0557, 1.5601)
-        + 0.1428 * z(klChange, 0.1188, 0.3599);
-      const risk = logistic(lp);
-      document.getElementById("oai_risk").textContent = (risk * 100).toFixed(1) + "%";
-
-      const tertile = risk < 0.052 ? tertiles[0] : risk < 0.117 ? tertiles[1] : tertiles[2];
-      const group = document.getElementById("oai_group");
-      group.className = "risk-label " + tertile.klass;
-      group.textContent = "Risk group: " + tertile.label;
-
-      const contributors = [
-        {show: kl >= 3, weight: 5, text: "Current KL" + kl + " reflecting accumulated structural disease burden"},
-        {show: pain >= 3, weight: 4, text: "Current pain burden on the harmonized 0-10 scale"},
-        {show: klChange > 0, weight: 3, text: "Recent KL worsening during the previous 24 months"},
-        {show: age >= 67, weight: 2, text: "Older age at the landmark assessment"},
-        {show: painChange > 1, weight: 1, text: "Recent pain worsening, with modest added information after current pain"}
-      ];
-      document.getElementById("oai_contributors").innerHTML =
-        contributionList(contributors) || "<li>Current KL grade and current pain remain the main model inputs for risk ranking.</li>";
-
-      document.getElementById("thresholds").innerHTML = thresholds.map(t => {
-        const above = risk >= t.threshold;
-        return "<div class=\"threshold-card\"><strong>" + (t.threshold * 100).toFixed(0) + "% threshold</strong>"
-          + (above ? "Estimate is above this research threshold." : "Estimate is below this research threshold.")
-          + "<br>High-risk knees: " + t.high
-          + "<br>Events captured: " + t.captured
-          + "<br>PPV: " + t.ppv + "; NPV: " + t.npv + "</div>";
-      }).join("");
-    }
-
-    function calculateRecalibration() {
-      const lp = getNumber("lp_oai");
-      const horizon = document.getElementById("recal_horizon").value;
-      const method = document.getElementById("recal_method").value;
-      const params = {
-        "24": {original: [0, 1], intercept: [1.00, 1], logistic: [0.2843, 0.5075]},
-        "36": {original: [0, 1], intercept: [1.67, 1], logistic: [0.9545, 0.5814]}
-      };
-      let alpha, beta;
-      if (method === "custom") {
-        alpha = getNumber("custom_alpha");
-        beta = getNumber("custom_beta");
-      } else {
-        [alpha, beta] = params[horizon][method];
-      }
-      const original = logistic(lp);
-      const recal = logistic(alpha + beta * lp);
-      document.getElementById("recal_result").innerHTML =
-        "<h3>Target-cohort recalibration result</h3>"
-        + "<p><strong>Original OAI estimate:</strong> " + (original * 100).toFixed(1) + "%</p>"
-        + "<p><strong>Recalibrated target-cohort estimate:</strong> " + (recal * 100).toFixed(1) + "%</p>"
-        + "<p><strong>Absolute difference:</strong> " + ((recal - original) * 100).toFixed(1) + " percentage points</p>"
-        + "<p>This illustrates preserved ranking with shifted absolute risk under target-cohort recalibration.</p>";
-    }
-
-    function resetCheck() {
-      document.getElementById("check_age").value = 56;
-      document.getElementById("check_bmi").value = 26.1;
-      document.getElementById("check_pain").value = 4.9;
-      document.getElementById("check_pain_num").value = 4.9;
-      document.getElementById("check_function").value = 15.5;
-      document.getElementById("check_kl").value = 0;
-      document.getElementById("check_risk").textContent = "--";
-      document.getElementById("check_group").textContent = "Awaiting calculation";
-      document.getElementById("check_contributors").innerHTML = "<li>Enter patient and knee information, then calculate.</li>";
-      showWarning("check_warning", []);
-    }
-
-    function resetOai() {
-      document.getElementById("oai_age").value = 63;
-      document.getElementById("oai_pain").value = 3.8;
-      document.getElementById("oai_kl").value = 2;
-      document.getElementById("oai_pain_prev").value = 2.5;
-      document.getElementById("oai_kl_prev").value = 2;
-      document.getElementById("oai_risk").textContent = "--";
-      document.getElementById("oai_group").textContent = "Awaiting calculation";
-      document.getElementById("oai_contributors").innerHTML = "<li>Enter landmark and previous 24-month information, then calculate.</li>";
-      document.getElementById("thresholds").innerHTML = "";
-      showWarning("oai_warning", []);
-    }
-
-    function downloadSummary(module) {
-      const active = module === "check" ? "early" : "arthroplasty";
-      showPage(active);
-      setTimeout(() => window.print(), 120);
-    }
-
-    calculateCheck();
-    calculateOai();
-    calculateRecalibration();
+    document.querySelectorAll("input, select").forEach(el => el.addEventListener("input", update));
+    update();
   </script>
 </body>
 </html>
